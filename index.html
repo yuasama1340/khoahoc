@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Journey of Clow – Khoá Học Bài Clow Huyền Bí</title>
+  <meta name="description" content="Khám phá hành trình huyền bí cùng Khoá học The Journey of Clow. Học bài Clow/Sakura cùng Clow Cat Patronus – hơn 10 năm kinh nghiệm Huyền Học, 120+ học viên, 20+ khoá." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/jpeg" href="hinh/logofavicon.jpg" />
+  
+  <!-- Cải thiện hiệu năng -->
+  <link rel="preload" href="tieude.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="style.css" as="style">
+</head>
+<body>
+
+  <!-- Scroll progress indicator -->
+  <div id="scroll-progress"></div>
+  <!-- Ambient floating particles -->
+  <div id="ambient-particles"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="hinh/logo.png" alt="Clow Cat Patronus" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">Về Khoá Học</a></li>
+        <li><a href="#instructor">Người Dạy</a></li>
+        <li><a href="#benefits">Quyền Lợi</a></li>
+        <li><a href="#testimonials">Cảm Nhận</a></li>
+        <li><a href="#pricing">Học Phí</a></li>
+        <li><a href="#register" class="btn-nav">Đăng Ký Ngay</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-circle"></div>
+    <div class="hero-magic-circle">
+      <img src="hinh/background.jpg" alt="Magic Circle" class="magic-circle-img spin-slow" />
+    </div>
+    <div class="hero-cards">
+      <img src="hinh/labai.jpg" alt="Clow Card" class="hero-card card-left float-card" />
+      <img src="hinh/labai.jpg" alt="Clow Card" class="hero-card card-right float-card-r" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Khoá Học Chinh Phục Bài Clow/Sakura – Từ 2019 ✦</div>
+      <h1 class="hero-title hero-title-reveal">
+        <span class="hero-title-line">Khám Phá</span>
+        <span class="gold-italic shimmer-title hero-title-line hero-title-line-gold">The Journey of Clow</span>
+      </h1>
+      <p class="hero-sub">Khám phá sức mạnh huyền bí của bộ bài Clow/Sakura • Chữa lành • Định hướng • Thấu hiểu bản thân</p>
+      <div class="hero-cta">
+        <a href="#pricing" class="btn-primary" id="hero-btn-pricing">Xem Học Phí</a>
+        <a href="#register" class="btn-outline" id="hero-btn-register">Đăng Ký Ngay</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Khoá đã khai giảng</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">120+</span>
+          <span class="stat-label">Học viên</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">1000+</span>
+          <span class="stat-label">Khách được tư vấn</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Năm kinh nghiệm</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about-section" id="about">
+    <!-- Background image -->
+    <img
+      class="about-gif-bg"
+      src="nenbg.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <!-- Dark overlay -->
+    <div class="about-overlay"></div>
+    <div class="section-inner about-inner" style="position:relative;z-index:2;">
+      <div class="section-tag">VỀ KHOÁ HỌC</div>
+      <h2 class="section-title">Bài Clow Dành Cho Ai?</h2>
+      <p class="section-desc">The Journey of Clow không chỉ là một khoá học về bài bói — đây là hành trình khám phá chính mình qua ngôn ngữ của những lá bài huyền bí.</p>
+      <div class="target-grid">
+        <div class="target-card">
+          <div class="card-glow-orb orb-gold"></div>
+          <div class="target-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <rect x="4" y="3" width="16" height="18" rx="2" />
+              <rect x="6" y="5" width="12" height="14" rx="1" stroke-dasharray="1 1" />
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 9v6M9 12h6M10 10l4 4M14 10l-4 4" />
+            </svg>
+          </div>
+          <h3>Reader Bài Tiên Tri</h3>
+          <p>Bạn đang dùng Tarot, Lenormand và muốn thêm công cụ Huyền Học đặc biệt để đa dạng hóa góc nhìn và trở nên chuyên nghiệp hơn.</p>
+        </div>
+        <div class="target-card">
+          <div class="card-glow-orb orb-pink"></div>
+          <div class="target-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <path d="M12 12c0-3 1.5-5 3.5-5s2.5 2 1 4.5S13.5 12 12 12zm0 0c2.5 1.5 4.5 3 4.5 5s-2 2.5-4.5 1S12 13.5 12 12zm0 0c-2.5 1.5-4.5 3-4.5 5s-2-2.5-1-5S9.5 12 12 12zm0 0c-2.5-1.5-4.5-3-4.5-5s2-2.5 4.5-1S12 10.5 12 12zm0 0c0-3-1.5-5-3.5-5s-2.5 2-1 4.5S10.5 12 12 12z" />
+              <circle cx="12" cy="12" r="2.5" />
+            </svg>
+          </div>
+          <h3>Fan Sakura Thủ Lĩnh Thẻ Bài</h3>
+          <p>Bạn yêu bộ Anime/Manga tuổi thơ và muốn khám phá ứng dụng thực tiễn tuyệt diệu của bộ bài Clow/Sakura.</p>
+        </div>
+        <div class="target-card">
+          <div class="card-glow-orb orb-teal"></div>
+          <div class="target-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="7" stroke-dasharray="2 2" />
+              <path d="M12 4v16M4 12h16M7 7l10 10M17 7L7 17" />
+              <polygon points="12,9 14,12 12,15 10,12" fill="currentColor" stroke="none" />
+            </svg>
+          </div>
+          <h3>Người Cần Định Hướng</h3>
+          <p>Bạn đang gặp khó khăn và cần một công cụ để tự nhìn nhận, định hướng lại cuộc sống một cách khách quan và sâu sắc.</p>
+        </div>
+        <div class="target-card">
+          <div class="card-glow-orb orb-blue"></div>
+          <div class="target-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <path d="M12 17.5c-4-4.5-6-6.5-6-8.5a3.5 3.5 0 0 1 6-2.5 3.5 3.5 0 0 1 6 2.5c0 2-2 4-6 8.5z" />
+              <path d="M6 10c-2-1-4-.5-5 1s0 3.5 2 4.5c2 1 3 0 3 0" />
+              <path d="M5.5 11.5c-1.5-.8-3-.4-3.8.8S1.5 14.5 3 15.3c1.5.8 2.5 0 2.5 0" />
+              <path d="M18 10c2-1 4-.5 5 1s0 3.5-2 4.5c-2 1-3 0-3 0" />
+              <path d="M18.5 11.5c1.5-.8 3-.4 3.8.8s-.2 2.2-1.7 3c-1.5.8-2.5 0-2.5 0" />
+            </svg>
+          </div>
+          <h3>Người Cần Lắng Nghe</h3>
+          <p>Bạn tìm kiếm sự thấu hiểu, chữa lành và đồng hành trong hành trình chăm sóc sức khỏe tinh thần.</p>
+        </div>
+        <div class="target-card">
+          <div class="card-glow-orb orb-purple"></div>
+          <div class="target-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(-30 12 12)" />
+              <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(30 12 12)" />
+              <circle cx="12" cy="12" r="3" />
+              <circle cx="5" cy="8" r="1.5" fill="currentColor" />
+              <circle cx="19" cy="8" r="1.5" fill="currentColor" />
+              <circle cx="8" cy="17" r="1.5" fill="currentColor" />
+              <circle cx="16" cy="17" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Lĩnh Vực Con Người</h3>
+          <p>Bạn làm việc trong Nhân sự, Tâm lý, Giáo dục, Chăm sóc sức khỏe tinh thần và muốn mở rộng góc nhìn về bản chất con người.</p>
+        </div>
+        <div class="target-card">
+          <div class="card-glow-orb orb-red"></div>
+          <div class="target-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <path d="M8 20h8M9 17l-2 3M15 17l2 3" />
+              <path d="M18.5 14.5A7.5 7.5 0 0 1 10.5 6.5a7.5 7.5 0 0 0 8 8z" />
+              <circle cx="12" cy="11" r="5" />
+              <path d="M12 3v2M12 17v1M6 11H4M20 11h-2" />
+            </svg>
+          </div>
+          <h3>Người Yêu Huyền Học</h3>
+          <p>Bạn đam mê các hệ thống biểu tượng và muốn học Huyền Học theo cách tư duy, khách quan, ứng dụng thực tiễn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INSTRUCTOR ========== -->
+  <section class="section instructor-section" id="instructor">
+    <div class="instructor-bg-deco"></div>
+    <div class="section-inner instructor-inner">
+      <div class="instructor-left">
+        <div class="instructor-img-wrap">
+          <img src="hinh/phanthaibao.jpg" alt="Phan Thái Bảo" class="instructor-img" loading="lazy" />
+          <div class="instructor-glow"></div>
+        </div>
+      </div>
+      <div class="instructor-right">
+        <div class="section-tag">NGƯỜI HƯỚNG DẪN</div>
+        <h2 class="section-title">Clow Cat Patronus</h2>
+        <p class="instructor-aka">a.k.a <strong>Phan Thái Bảo</strong></p>
+        <p class="instructor-desc">Người đồng hành cùng hàng ngàn tâm hồn trên hành trình khám phá bản thân qua ngôn ngữ của những lá bài Clow huyền bí.</p>
+        <div class="instructor-facts">
+          <div class="fact-item">
+            <span class="fact-icon">
+              <svg viewBox="0 0 24 24" class="magic-svg">
+                <path d="M12 2l2.5 6.5L21 11l-5 5 1.5 7-5.5-4-5.5 4 1.5-7-5-5 6.5-2.5z" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </span>
+            <span>Hơn <strong>10 năm</strong> nghiên cứu Huyền Học, đặc biệt bộ bài Clow</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">
+              <svg viewBox="0 0 24 24" class="magic-svg">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="7" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </span>
+            <span>Đã tư vấn cho hơn <strong>1.000 khách hàng</strong></span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">
+              <svg viewBox="0 0 24 24" class="magic-svg">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="14" y2="17" />
+              </svg>
+            </span>
+            <span>Khai giảng từ <strong>2019</strong>, hơn <strong>20 khoá học</strong> với <strong>120+ học viên</strong></span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">
+              <svg viewBox="0 0 24 24" class="magic-svg">
+                <rect x="9" y="2" width="6" height="10" rx="3" />
+                <path d="M5 10a7 7 0 0 0 14 0" />
+                <line x1="12" y1="17" x2="12" y2="22" />
+                <line x1="9" y1="22" x2="15" y2="22" />
+                <path d="M19 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" />
+              </svg>
+            </span>
+            <span>Tổ chức hơn <strong>10 buổi workshop</strong> từ 2024 với chủ đề <em>Ứng dụng Huyền Học và Bài Clow để HIỂU & THƯƠNG</em></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BENEFITS ========== -->
+  <section class="section benefits-section" id="benefits">
+    <!-- Video background -->
+    <video class="benefits-video-bg" muted playsinline loop preload="none">
+      <source src="intro.mp4" type="video/mp4">
+    </video>
+    <!-- Dark overlay to keep content readable -->
+    <div class="benefits-overlay"></div>
+    <div class="section-inner" style="position:relative;z-index:2;">
+      <div class="section-tag">QUYỀN LỢI HỌC VIÊN</div>
+      <h2 class="section-title">Bạn Nhận Được Gì?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-num">01</div>
+          <h3>Khai Phá Bản Thân</h3>
+          <p>Mở rộng góc nhìn, thấu suốt giá trị và năng lực cá nhân qua các hệ thống biểu tượng (Bài Clow, Chiêm Tinh, Nhân Số học,...).</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">02</div>
+          <h3>Thấu Hiểu & Chữa Lành</h3>
+          <p>Được đồng hành và chăm sóc sức khỏe tinh thần. Rèn luyện tâm thức, biết cách xoa dịu bản thân trước khi giúp đỡ người khác.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">03</div>
+          <h3>Có cơ hội trở thành Reader chuyên nghiệp</h3>
+          <p>Trang bị tư duy và kỹ năng cốt lõi của một Reader thực chiến, linh hoạt áp dụng cho nhiều công cụ tiên tri khác nhau.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">04</div>
+          <h3>Đồng Hành Dài Hạn</h3>
+          <p>Tham gia hệ sinh thái nghệ thuật & chữa lành của Clow Cat Patronus. Học viên xuất sắc được trực tiếp đào tạo làm nghề và kết nối khách hàng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ========== FALLING CARDS WRAPPER FOR BACKGROUND ANIMATION ========== -->
+  <div class="falling-cards-wrapper" id="falling-cards-container">
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="section-inner testimonials-inner" style="max-width: 100%; padding: 0;">
+        <div class="section-tag" style="justify-content:center; margin-bottom:10px;"><span style="white-space: nowrap;">Học viên nói gì?</span></div>
+        <h2 class="section-title" style="margin-bottom:48px;"><span style="white-space: nowrap;">Sau hành trình</span> <span class="gold-italic"><span style="white-space: nowrap;">khám phá</span> <span style="white-space: nowrap;">khoá học</span></span></h2>
+        <div class="swiper feedback-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback1.jpg" alt="Cảm nhận học viên 1" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback2.jpg" alt="Cảm nhận học viên 2" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback3.jpg" alt="Cảm nhận học viên 3" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback4.jpg" alt="Cảm nhận học viên 4" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback5.jpg" alt="Cảm nhận học viên 5" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback6.jpg" alt="Cảm nhận học viên 6" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback7.jpg" alt="Cảm nhận học viên 7" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback8.jpg" alt="Cảm nhận học viên 8" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback9.jpg" alt="Cảm nhận học viên 9" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback10.jpg" alt="Cảm nhận học viên 10" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback11.jpg" alt="Cảm nhận học viên 11" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback12.jpg" alt="Cảm nhận học viên 12" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback13.jpg" alt="Cảm nhận học viên 13" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback14.jpg" alt="Cảm nhận học viên 14" loading="lazy" /></div></div>
+            <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback15.jpg" alt="Cảm nhận học viên 15" loading="lazy" /></div></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRICING TABLE ========== -->
+    <!-- ========== PRICING TABLE ========== -->
+    <section class="section pricing-table-section" id="pricing">
+      <!-- Magic circle background rotation -->
+      <div class="pricing-magic-circle spin-slow"></div>
+      <div class="pricing-bg-deco"></div>
+      
+      <div class="section-inner">
+        <div class="section-tag">HỌC PHÍ & SO SÁNH</div>
+        <h2 class="section-title">Chọn Hành Trình Của Bạn</h2>
+        <p class="section-desc">
+          Nhìn rõ những gì bạn nhận được để chọn đúng hành trình cho bản thân<br>
+          <span style="color: var(--gold); display: block; margin-top: 6px; font-weight: 500;">✦ Cả 2 khoá đều phù hợp cho người mới bắt đầu từ số 0 ✦</span>
+        </p>
+
+        <div class="pricing-table-container">
+          
+          <!-- Header -->
+          <div class="pt-header-row">
+            <div class="pt-col-criteria"></div>
+            <div class="pt-col-pack beginner-pack">
+              <h3>Gói BEGINNER<br><span>(Cơ bản)</span></h3>
+            </div>
+            <div class="pt-col-pack advance-pack">
+              <div class="pt-ribbon">Lựa chọn tối ưu</div>
+              <h3>Gói ADVANCE<br><span>(Cơ bản + Nâng cao)</span></h3>
+            </div>
+          </div>
+
+          <!-- Info rows -->
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Học phí</div>
+            <div class="pt-cell-val beginner-val">7.000.000đ</div>
+            <div class="pt-cell-val advance-val price-highlight">16.000.000đ</div>
+          </div>
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Ưu đãi &<br>Thanh toán</div>
+            <div class="pt-cell-val beginner-val">Hỗ trợ trả góp linh hoạt</div>
+            <div class="pt-cell-val advance-val">Trả góp + <strong class="fomo-text">Giảm ngay 1.000.000đ</strong> (Early Bird)</div>
+          </div>
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Thời lượng &<br>Cam kết</div>
+            <div class="pt-cell-val beginner-val">18 buổi<br>(1 tuần 2 buổi, 2 tiếng/buổi)</div>
+            <div class="pt-cell-val advance-val"><strong>34 buổi</strong><br>(1 tuần 2 buổi, 2 tiếng/buổi)</div>
+          </div>
+
+          <!-- Group 1 -->
+          <div class="pt-group-header">
+            <svg class="pt-group-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <path d="M12 6v6M10 9h4"></path>
+            </svg>
+            <span>NỀN TẢNG KIẾN THỨC & KỸ NĂNG</span>
+          </div>
+          
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Tư duy ứng dụng & Nguyên tố</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              Hiểu nền tảng Huyền học, ứng dụng thực tế. Dành <strong class="highlight-text">9 buổi</strong> để học hành trình & ý nghĩa 6 nhóm nguyên tố (gộp chung 2-3 nhóm/buổi để học nhanh).
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              <strong>Ứng dụng chuyên sâu.</strong> Dành tới <strong class="highlight-text">17 buổi</strong> mổ xẻ chi tiết hành trình & ý nghĩa từng nguyên tố riêng biệt, kết hợp Ngũ hành Nhật Bản và Vòng tròn nhận thức & cảm xúc.
+            </div>
+          </div>
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Năng lực giải bài</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              Đọc ý nghĩa 52 lá, giải tốt trải bài cơ bản & phỏng vấn bản thân.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              <strong>Đọc bài nhanh, sắc bén</strong> nhờ 32 Combo. Thành thục trải bài Phỏng vấn ở mọi khía cạnh.
+            </div>
+          </div>
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Tuyệt kỹ trải bài</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              Làm chủ trải bài 7 lá, 10 lá và Tốc hành.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              <strong>Nắm vững những trải bài cơ bản kèm thực hành trực tiếp.</strong> Đồng thời được hướng dẫn giải <strong>trải bài định hướng 12 tháng</strong> - một trong những trải bài khó nhất.
+            </div>
+          </div>
+
+          <!-- Group 2: Emotional -->
+          <div class="pt-group-header focal-point">
+            <svg class="pt-group-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 9v6M9 12h6"></path>
+            </svg>
+            <span>GIÁ TRỊ CẢM XÚC & SỰ CHUYỂN HÓA BẢN THÂN</span>
+          </div>
+          
+          <div class="pt-row focal-row">
+            <div class="pt-cell-criteria">Chữa lành & Đồng hành</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-row-svg mystical-icon mystical-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              Hiểu thông điệp lá bài để tự định hướng.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-row-svg mystical-icon mystical-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              <strong>Được lắng nghe và chữa lành:</strong> Giảng viên trực tiếp đồng hành, lắng nghe nỗi đau qua từng lá bài và trao giải pháp khắc phục thực tế.
+            </div>
+          </div>
+          <div class="pt-row focal-row">
+            <div class="pt-cell-criteria">Chuyển hóa Tâm thức</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-row-svg mystical-icon mystical-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              Bắt đầu xây dựng thói quen nhìn nhận vấn đề đa chiều.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-row-svg mystical-icon mystical-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <strong class="bold-impact">Hành trình lột xác:</strong> Có thời gian đủ dài, đủ sâu để rèn luyện thay đổi tâm thức, thói quen và nâng tầm kỹ năng sống.
+            </div>
+          </div>
+          <div class="pt-row focal-row">
+            <div class="pt-cell-criteria">Sức nặng Lời nói</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-row-svg mystical-icon mystical-feather" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="6.5"/></svg>
+              Biết cách cho lời khuyên có trách nhiệm, tăng độ uy tín.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-row-svg mystical-icon mystical-feather" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="6.5"/></svg>
+              <strong>Sắc bén trong khai vấn:</strong> Nắm vững nghệ thuật đặt câu hỏi, tăng tối đa trọng lượng trong từng lời nói tư vấn.
+            </div>
+          </div>
+          <div class="pt-row focal-row">
+            <div class="pt-cell-criteria">Mở rộng Thế giới quan</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-row-svg mystical-icon mystical-orbit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)"/></svg>
+              Có nền tảng nguyên lý để tự nghiên cứu môn khác.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-row-svg mystical-icon mystical-orbit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)"/></svg>
+              <strong>Đặc quyền Networking:</strong> Được kết nối với các Mentor Huyền học lĩnh vực khác để có thêm góc nhìn về bản thân và cuộc sống.
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="pt-group-header">
+            <svg class="pt-group-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="10" r="8"></circle>
+              <path d="M12 18v4M9 22h6M8 10a4 4 0 0 1 4-4"></path>
+            </svg>
+            <span>ĐỊNH HƯỚNG NGHỀ NGHIỆP READER</span>
+          </div>
+          
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Đạo đức làm nghề</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              Xây dựng tư duy vững chắc để trở thành Reader Giỏi & Tốt.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              Hoàn thiện trọn vẹn chân dung một Reader chuyên nghiệp, có tâm và có tầm.
+            </div>
+          </div>
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Định giá Dịch vụ</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              Định hình phong cách xem bài phù hợp năng lực bản thân.
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              <strong class="bold-impact">Sẵn sàng kiếm tiền:</strong> Giảng viên trực tiếp giúp định hình phong cách và <strong>cố vấn mức phí tư vấn</strong> xem bài.
+            </div>
+          </div>
+          <div class="pt-row">
+            <div class="pt-cell-criteria">Bảo chứng năng lực</div>
+            <div class="pt-cell-val beginner-val">
+              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
+              Đủ nền tảng, tư duy và đạo đức để tự tin <strong>hành nghề độc lập.</strong>
+            </div>
+            <div class="pt-cell-val advance-val">
+              <svg class="magic-row-svg row-chalice advance-chalice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a6 6 0 0 0-6 6v3c0 3 3 5 6 5s6-2 6-5V8a6 6 0 0 0-6-6zM6 8h12M9 16v4M7 20h10"/></svg>
+              <strong>Được Tổng kết và Cấp chứng chỉ</strong> chính thức sau khóa học để gia tăng uy tín cá nhân.
+            </div>
+          </div>
+
+          <!-- Footer CTAs -->
+          <div class="pt-footer-row">
+            <div class="pt-col-criteria"></div>
+            <div class="pt-col-pack beginner-pack">
+              <a href="#register" class="btn-outline pt-btn" onclick="setTimeout(()=>{document.getElementById('reg-course').value='beginner'},400)">ĐĂNG KÝ BẢN BEGINNER</a>
+            </div>
+            <div class="pt-col-pack advance-pack">
+              <a href="#register" class="btn-primary pt-btn" onclick="setTimeout(()=>{document.getElementById('reg-course').value='advance'},400)">ĐĂNG KÝ BẢN ADVANCE</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <!-- ========== REQUIREMENTS ========== -->
+  <section class="section requirements-section" id="requirements">
+    <!-- Background GIF -->
+    <img
+      class="requirements-bg"
+      src="req_bg.gif"
+      alt=""
+      aria-hidden="true"
+    />
+    <!-- Dark overlay -->
+    <div class="requirements-overlay"></div>
+    <div class="section-inner" style="position:relative;z-index:2;">
+      <div class="section-tag">YÊU CẦU KHOÁ HỌC</div>
+      <h2 class="section-title">Điều Kiện Tham Gia</h2>
+      <div class="req-grid">
+        <div class="req-card">
+          <div class="req-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <path d="M5 2h14v3L14 12l5 7v3H5v-3l5-7L5 5V2z" />
+              <path d="M12 12l-3 4.5h6zM9 5.5h6L12 10z" fill="currentColor" opacity="0.3" />
+            </svg>
+          </div>
+          <h3>Độ Tuổi</h3>
+          <p>Từ đủ <strong>18 tuổi</strong> trở lên</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <rect x="3" y="5" width="12" height="16" rx="2" transform="rotate(-10 3 5)" />
+              <rect x="8" y="3" width="12" height="16" rx="2" />
+              <circle cx="14" cy="11" r="2.5" />
+            </svg>
+          </div>
+          <h3>Công Cụ</h3>
+          <p>Sở hữu tối thiểu <strong>một bộ bài Clow hoặc Sakura</strong></p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 5a7 7 0 0 0-4.5 12.3A7.5 7.5 0 0 1 15 8.5a7.4 7.4 0 0 1-3-3.5z" stroke="none" fill="currentColor" opacity="0.3" />
+              <polyline points="12 7 12 12 15 12" />
+            </svg>
+          </div>
+          <h3>Thời Gian</h3>
+          <p>Chủ động sắp xếp lịch học (offline hoặc online), <strong>khung giờ buổi tối</strong></p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z" />
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 10v4M10 12h4" />
+            </svg>
+          </div>
+          <h3>Tư Duy & Đạo Đức</h3>
+          <p>Nói không với mê tín dị đoan. Tư duy khách quan, tôn trọng sự khác biệt, không bài xích tôn giáo</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              <path d="M12 6v6M10 9h4" />
+            </svg>
+          </div>
+          <h3>Tinh Thần Học Tập</h3>
+          <p>Đề cao tranh luận tích cực. Chủ động lắng nghe, chia sẻ và sẵn sàng thay đổi</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">
+            <svg viewBox="0 0 24 24" class="magic-svg">
+              <path d="M12 4l1.5 3 3.5.5-2.5 2.5.5 3.5-3-2-3 2 .5-3.5L5 7.5l3.5-.5z" />
+              <path d="M3 18c3-2 6-2 9 0" />
+              <path d="M12 18c3-2 6-2 9 0" />
+              <path d="M12 14v6" stroke-dasharray="2 2" />
+            </svg>
+          </div>
+          <h3>Tinh Thần Cộng Đồng</h3>
+          <p>Nếu có vướng mắc, chủ động trao đổi với Mentor để cùng tìm giải pháp</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== REGISTER FORM ========== -->
+  <section class="section register-section" id="register">
+    <div class="register-magic-bg">
+      <img src="hinh/background.jpg" alt="" class="register-magic-img spin-slow" loading="lazy" />
+    </div>
+
+    <div class="section-inner register-inner-new">
+
+      <!-- LEFT: Text & info -->
+      <div class="reg-left">
+        <div class="section-tag" style="justify-content:flex-start;">SẴN SÀNG BẮT ĐẦU?</div>
+        <h2 class="reg-title">Đăng Ký <span class="gold-italic">Ngay Hôm Nay</span></h2>
+        <p class="reg-desc">Hãy để vị thần hộ vệ có đôi mắt vàng nhìn thấy những điều tuyệt vời trong tâm hồn bạn.</p>
+
+        <div class="reg-mode-list">
+          <div class="reg-mode-card">
+            <div class="reg-mode-icon">🌐</div>
+            <div>
+              <strong>Online</strong>
+              <p>dành cho các bạn học viên ở xa</p>
+            </div>
+          </div>
+          <div class="reg-mode-card">
+            <div class="reg-mode-icon">📍</div>
+            <div>
+              <strong>Offline</strong>
+              <p>thực hành trực tiếp tại TP. HCM</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="reg-right">
+        <div class="reg-form-card">
+          <h3 class="reg-form-title">Đăng Ký Khoá Học</h3>
+
+          <form class="reg-form" id="reg-form" onsubmit="handleRegisterSubmit(event)">
+
+            <div class="form-group">
+              <label for="reg-name">Họ và tên <span class="req">*</span></label>
+              <input type="text" id="reg-name" name="name" placeholder="Nhập tên của bạn" required />
+            </div>
+
+            <div class="form-group">
+              <label for="reg-email">Email của bạn <span class="req">*</span></label>
+              <input type="email" id="reg-email" name="email" placeholder="example@gmail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="reg-phone">Số điện thoại <span class="req">*</span></label>
+              <input type="tel" id="reg-phone" name="phone" placeholder="0xxx xxx xxx" required />
+            </div>
+
+            <div class="form-group">
+              <label for="reg-facebook">Link facebook của bạn là gì? <span class="req">*</span></label>
+              <input type="text" id="reg-facebook" name="facebook" placeholder="Nhập link facebook hoặc tên tài khoản" required />
+            </div>
+
+            <div class="form-group">
+              <label for="reg-mode">Hình thức <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="reg-mode" name="mode" required>
+                  <option value="" disabled selected>-- Chọn hình thức --</option>
+                  <optgroup label="Online">
+                    <option value="online-meet">Online (Google Meet)</option>
+                  </optgroup>
+                  <optgroup label="Offline">
+                    <option value="offline-comma">Offline – The Comma Coffee, 21 Hoa Mai, Q. Phú Nhuận</option>
+                  </optgroup>
+                </select>
+                <span class="select-arrow">⌄</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-course">Khoá học <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="reg-course" name="course" required>
+                  <option value="" disabled selected>-- Chọn khoá học --</option>
+                  <optgroup label="Khoá học">
+                    <option value="beginner">Khoá Beginner – Cơ Bản (7.000.000đ | 18 buổi)</option>
+                    <option value="advance">Khoá Advance – Cơ Bản + Nâng Cao (16.000.000đ | 34 buổi)</option>
+                  </optgroup>
+                </select>
+                <span class="select-arrow">⌄</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-payment">Hình thức đóng học phí <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="reg-payment" name="payment" required>
+                  <option value="" disabled selected>-- Chọn hình thức đóng học phí --</option>
+                  <option value="Trả hết">Trả hết</option>
+                  <option value="Trả góp">Trả góp</option>
+                </select>
+                <span class="select-arrow">⌄</span>
+              </div>
+              <div id="payment-installment-desc" class="payment-desc">
+                Với khoá Beginner bạn đóng trước phí giữ chỗ là 3.000.000đ. Phần phí còn lại chia đều cho các tháng.<br>
+                Với khoá Advance bạn đóng trước phí giữ chỗ là 4.000.000đ. Phần phí còn lại chia đều cho các tháng.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-note">Lời nhắn / Câu hỏi muốn chia sẻ</label>
+              <textarea id="reg-note" name="note" rows="3" placeholder="Ví dụ: Tôi muốn biết thêm về lịch học gần nhất..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary full-width reg-submit-btn" id="reg-submit">
+              ✦ Gửi Đăng Ký
+            </button>
+            <p class="reg-form-note">Chúng tôi sẽ liên hệ xác nhận trong vòng 24 giờ.</p>
+          </form>
+
+          <!-- Payment Step (hidden by default) -->
+          <div class="reg-payment-step" id="payment-step" style="display:none; text-align:center;">
+            <h4 style="margin-bottom: 8px;">Thanh Toán Chuyển Khoản</h4>
+            <p style="font-size:0.9rem; color:var(--light-text); margin-bottom: 16px;">Vui lòng quét mã QR hoặc chuyển khoản với nội dung: <strong>HỌ TÊN - SĐT</strong></p>
+            
+            <div class="qr-container" style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; border: 1px solid rgba(244,188,126,0.2); margin-bottom: 20px; display:inline-block;">
+              <img id="qr-image" src="https://img.vietqr.io/image/tpbank-0969302801-compact2.png?amount=0&addInfo=ThanhToan&accountName=PHAN%20THAI%20BAO" alt="QR Code Thanh Toán" style="width: 200px; max-width: 100%; border-radius: 8px; margin-bottom:12px;"/>
+              <div class="payment-details" style="text-align: left; font-size: 0.9rem; line-height: 1.6;">
+                <div>Số tiền: <strong class="gold-text" id="payment-amount" style="font-size: 1.1rem;">0đ</strong></div>
+                <div>Ngân hàng: <strong>TPBank (Tiên Phong Bank)</strong></div>
+                <div>Số tài khoản: <strong>0969302801</strong></div>
+                <div>Chủ tài khoản: <strong>PHAN THAI BAO</strong></div>
+              </div>
+            </div>
+
+            <button type="button" class="btn-primary full-width" id="btn-paid">
+              ✦ Tôi đã chuyển khoản thành công
+            </button>
+          </div>
+
+          <!-- Success Step (hidden by default) -->
+          <div class="reg-success-step" id="success-step" style="display:none; text-align:center;">
+            <div class="success-icon" style="font-size: 3rem; color: var(--gold); margin-bottom: 16px;">✦</div>
+            <h4 style="margin-bottom: 12px;">Đăng Ký & Thanh Toán Hoàn Tất!</h4>
+            <p style="margin-bottom: 24px; color: var(--light-text); font-size: 0.95rem;">
+              Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ gửi email xác nhận cùng lịch học cho bạn.
+            </p>
+            
+            <div class="success-actions">
+              <a href="https://m.me/clowcatpatronus" target="_blank" class="btn-primary full-width" style="margin-bottom:12px; display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right:8px;"><path d="M12 2C6.48 2 2 6.13 2 11.23c0 2.89 1.48 5.48 3.8 7.21v3.56l3.47-1.92c.87.24 1.79.37 2.73.37 5.52 0 10-4.13 10-9.23S17.52 2 12 2zm1.09 12.33l-2.61-2.79-5.08 2.79 5.57-5.91 2.65 2.79 5.04-2.79-5.57 5.91z"/></svg>
+                Nhắn tin cho Fanpage
+              </a>
+              <button type="button" class="btn-secondary full-width" id="btn-return-home">
+                Quay lại trang chủ
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="contact">
+    <div class="footer-main">
+      <div class="footer-inner-grid">
+
+        <!-- COL LEFT: LIÊN HỆ -->
+        <div class="footer-col">
+          <div class="footer-col-title">LIÊN HỆ</div>
+          <p class="footer-col-desc">Tìm hiểu thêm qua các nền tảng mạng xã hội của Clow Cat Patronus:</p>
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/clowcatpatronus" class="footer-social-btn fb" id="footer-fb" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/clow_cat_patronus/" class="footer-social-btn ig" id="footer-ig" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@clow_cat_patronus" class="footer-social-btn tt" id="footer-tt" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.01-.08z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@ClowCatPatronusOfficial-1340" class="footer-social-btn yt" id="footer-yt" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#fff" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- COL CENTER: LOGO -->
+        <div class="footer-col footer-col-center">
+          <a href="#hero" class="footer-logo-link">
+            <img src="hinh/logo.png" alt="Clow Cat Patronus" class="footer-logo-img" />
+          </a>
+          <div class="footer-slogan">KHÁM PHÁ BẢN THÂN, BẬT PHÁ TIỀM NĂNG</div>
+        </div>
+
+        <!-- COL RIGHT: DỊCH VỤ -->
+        <div class="footer-col footer-col-right">
+          <div class="footer-col-title">DỊCH VỤ</div>
+          <ul class="footer-service-links">
+            <li><a href="#pricing">Khoá Beginner – Cơ Bản</a></li>
+            <li><a href="#pricing">Khoá Advance – Nâng Cao</a></li>
+            <li><a href="#pricing">Bảng Học Phí</a></li>
+            <li><a href="#benefits">Quyền Lợi Học Viên</a></li>
+            <li><a href="#register">Đăng Ký Ngay</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER BOTTOM BAR -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>© 2026 ClowCat Patronus. Tất cả quyền được bảo lưu.</span>
+        <span class="footer-love">✦ Được tạo ra với tình yêu và năng lượng tích cực ✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING SOCIAL BUTTONS ========== -->
+  <div class="floating-socials" id="floating-socials">
+    <a href="https://www.facebook.com/clowcatpatronus" class="float-btn float-fb" id="float-fb" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/clow_cat_patronus/" class="float-btn float-ig" id="float-ig" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@clow_cat_patronus" class="float-btn float-tt" id="float-tt" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.01-.08z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@ClowCatPatronusOfficial-1340" class="float-btn float-yt" id="float-yt" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#0C1736" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+    </a>
+  </div>
+  <!-- ========== BACKGROUND MUSIC ========== -->
+  <audio id="bgMusic" src="nhac.mp3" preload="auto"></audio>
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle Music">
+    <span class="music-icon">🎵</span>
+  </button>
+
+  <!-- ========== SCROLL TO TOP ========== -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" class="magic-svg">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
