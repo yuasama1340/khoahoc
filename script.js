@@ -150,7 +150,7 @@ window.addEventListener('scroll', () => {
     const id = section.getAttribute('id');
     const navLink = document.querySelector(`.nav-links a[href="#${id}"]`);
     if (!navLink) return;
-    const top = section.offsetTop;
+    const top = section.getBoundingClientRect().top + window.scrollY;
     const height = section.offsetHeight;
     if (scrollY >= top && scrollY < top + height) {
       document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active-link'));
