@@ -13,41 +13,41 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ---- MOBILE NAV TOGGLE ----
-const navToggle = document.getElementById('nav-toggle');
-const navLinks  = document.getElementById('nav-links');
+const navToggle  = document.getElementById('nav-toggle');
+const navLinks   = document.getElementById('nav-links');
+const navOverlay = document.getElementById('nav-overlay');
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+const toggleMenu = () => {
+  const isOpen = navLinks.classList.toggle('open');
   navToggle.classList.toggle('open');
-});
+  if (navOverlay) navOverlay.classList.toggle('open', isOpen);
+};
+
+const closeMenu = () => {
+  navLinks.classList.remove('open');
+  navToggle.classList.remove('open');
+  if (navOverlay) navOverlay.classList.remove('open');
+};
+
+if (navToggle) {
+  navToggle.addEventListener('click', toggleMenu);
+}
+
+if (navOverlay) {
+  navOverlay.addEventListener('click', closeMenu);
+}
 
 // Close mobile nav when a link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('open');
-  });
+  link.addEventListener('click', closeMenu);
 });
 
 // Close when clicking outside
 document.addEventListener('click', (e) => {
-  if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('open');
-  }
-});
-
-// ---- HAMBURGER ANIMATION ----
-navToggle.addEventListener('click', () => {
-  const spans = navToggle.querySelectorAll('span');
-  if (navToggle.classList.contains('open')) {
-    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-    spans[1].style.opacity   = '0';
-    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-  } else {
-    spans[0].style.transform = '';
-    spans[1].style.opacity   = '';
-    spans[2].style.transform = '';
+  if (navToggle && navLinks) {
+    if (!navToggle.contains(e.target) && !navLinks.contains(e.target) && (!navOverlay || !navOverlay.contains(e.target))) {
+      closeMenu();
+    }
   }
 });
 
@@ -224,10 +224,15 @@ function handleRegisterSubmit(e) {
     amount = payment === 'Trả góp' ? 4000000 : 16000000;
   }
 
+  // Lấy thêm số điện thoại để làm nội dung chuyển khoản
+  const phone = document.getElementById('reg-phone').value;
+  const courseStr = course === 'beginner' ? 'Beginner' : (course === 'advance' ? 'Advance' : course);
+  const transferContent = encodeURIComponent(`${courseStr} ${phone}`);
+
   // Cập nhật số tiền và mã QR
   const amountText = new Intl.NumberFormat('vi-VN').format(amount) + 'đ';
   document.getElementById('payment-amount').innerText = amountText;
-  document.getElementById('qr-image').src = `https://img.vietqr.io/image/tpbank-0969302801-compact2.png?amount=${amount}&addInfo=ThanhToanKhoaHoc&accountName=PHAN%20THAI%20BAO`;
+  document.getElementById('qr-image').src = `https://img.vietqr.io/image/tpbank-0969302801-compact2.png?amount=${amount}&addInfo=${transferContent}&accountName=PHAN%20THAI%20BAO`;
 
   // Lưu dữ liệu form vào biến toàn cục để gửi sau khi thanh toán
   pendingFormData = new URLSearchParams();

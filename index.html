@@ -42,6 +42,7 @@
       </button>
     </div>
   </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- ========== HERO ========== -->
   <section class="hero" id="hero">
@@ -121,8 +122,34 @@
           <div class="card-glow-orb orb-pink"></div>
           <div class="target-icon">
             <svg viewBox="0 0 24 24" class="magic-svg">
-              <path d="M12 12c0-3 1.5-5 3.5-5s2.5 2 1 4.5S13.5 12 12 12zm0 0c2.5 1.5 4.5 3 4.5 5s-2 2.5-4.5 1S12 13.5 12 12zm0 0c-2.5 1.5-4.5 3-4.5 5s-2-2.5-1-5S9.5 12 12 12zm0 0c-2.5-1.5-4.5-3-4.5-5s2-2.5 4.5-1S12 10.5 12 12zm0 0c0-3-1.5-5-3.5-5s-2.5 2-1 4.5S10.5 12 12 12z" />
-              <circle cx="12" cy="12" r="2.5" />
+              <g transform="translate(12, 12)">
+                <g>
+                  <path d="M 0 0 C -3 -3, -4.5 -6, -1.5 -8.5 L 0 -7.2 L 1.5 -8.5 C 4.5 -6, 3 -3, 0 0" />
+                  <path d="M 0 -2.5 L 0 -5.5" opacity="0.7" />
+                  <circle cx="0" cy="-5.5" r="0.5" fill="currentColor" stroke="none" opacity="0.7" />
+                </g>
+                <g transform="rotate(72)">
+                  <path d="M 0 0 C -3 -3, -4.5 -6, -1.5 -8.5 L 0 -7.2 L 1.5 -8.5 C 4.5 -6, 3 -3, 0 0" />
+                  <path d="M 0 -2.5 L 0 -5.5" opacity="0.7" />
+                  <circle cx="0" cy="-5.5" r="0.5" fill="currentColor" stroke="none" opacity="0.7" />
+                </g>
+                <g transform="rotate(144)">
+                  <path d="M 0 0 C -3 -3, -4.5 -6, -1.5 -8.5 L 0 -7.2 L 1.5 -8.5 C 4.5 -6, 3 -3, 0 0" />
+                  <path d="M 0 -2.5 L 0 -5.5" opacity="0.7" />
+                  <circle cx="0" cy="-5.5" r="0.5" fill="currentColor" stroke="none" opacity="0.7" />
+                </g>
+                <g transform="rotate(216)">
+                  <path d="M 0 0 C -3 -3, -4.5 -6, -1.5 -8.5 L 0 -7.2 L 1.5 -8.5 C 4.5 -6, 3 -3, 0 0" />
+                  <path d="M 0 -2.5 L 0 -5.5" opacity="0.7" />
+                  <circle cx="0" cy="-5.5" r="0.5" fill="currentColor" stroke="none" opacity="0.7" />
+                </g>
+                <g transform="rotate(288)">
+                  <path d="M 0 0 C -3 -3, -4.5 -6, -1.5 -8.5 L 0 -7.2 L 1.5 -8.5 C 4.5 -6, 3 -3, 0 0" />
+                  <path d="M 0 -2.5 L 0 -5.5" opacity="0.7" />
+                  <circle cx="0" cy="-5.5" r="0.5" fill="currentColor" stroke="none" opacity="0.7" />
+                </g>
+                <circle cx="0" cy="0" r="2" />
+              </g>
             </svg>
           </div>
           <h3>Fan Sakura Thủ Lĩnh Thẻ Bài</h3>
@@ -159,13 +186,20 @@
           <div class="card-glow-orb orb-purple"></div>
           <div class="target-icon">
             <svg viewBox="0 0 24 24" class="magic-svg">
-              <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(-30 12 12)" />
-              <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(30 12 12)" />
-              <circle cx="12" cy="12" r="3" />
-              <circle cx="5" cy="8" r="1.5" fill="currentColor" />
-              <circle cx="19" cy="8" r="1.5" fill="currentColor" />
-              <circle cx="8" cy="17" r="1.5" fill="currentColor" />
-              <circle cx="16" cy="17" r="1.5" fill="currentColor" />
+              <!-- Magic ring behind -->
+              <circle cx="12" cy="10" r="6" stroke-dasharray="2 2" opacity="0.4" />
+              <!-- Left figure -->
+              <circle cx="8.5" cy="7" r="2" />
+              <path d="M 6 20 V 15 C 6 13.5 7 12.5 8.5 12.5 C 10 12.5 11 13.5 11 15 V 20" />
+              <!-- Right figure -->
+              <circle cx="15.5" cy="7" r="2" />
+              <path d="M 13 20 V 15 C 13 13.5 14 12.5 15.5 12.5 C 17 12.5 18 13.5 18 15 V 20" />
+              <!-- Connected arms -->
+              <path d="M 8.5 14.5 Q 10 17 12 15" />
+              <path d="M 15.5 14.5 Q 14 17 12 15" />
+              <!-- Center star sparkle -->
+              <circle cx="12" cy="15" r="1.5" fill="currentColor" stroke="none" />
+              <path d="M 12 12 L 12 18 M 9 15 L 15 15" opacity="0.7" />
             </svg>
           </div>
           <h3>Lĩnh Vực Con Người</h3>
@@ -175,10 +209,23 @@
           <div class="card-glow-orb orb-red"></div>
           <div class="target-icon">
             <svg viewBox="0 0 24 24" class="magic-svg">
-              <path d="M8 20h8M9 17l-2 3M15 17l2 3" />
-              <path d="M18.5 14.5A7.5 7.5 0 0 1 10.5 6.5a7.5 7.5 0 0 0 8 8z" />
-              <circle cx="12" cy="11" r="5" />
-              <path d="M12 3v2M12 17v1M6 11H4M20 11h-2" />
+              <!-- Outer dotted zodiac/celestial orbit -->
+              <circle cx="12" cy="12" r="10" stroke-dasharray="2 2" opacity="0.4" />
+              <!-- Polar axis line with glyph details -->
+              <path d="M 12 2 L 12 22" opacity="0.8" />
+              <path d="M 10 20 H 14" />
+              <circle cx="12" cy="2" r="1" fill="currentColor" stroke="none" />
+              <!-- Tilted ring -->
+              <ellipse cx="12" cy="12" rx="9" ry="3.2" transform="rotate(-15 12 12)" />
+              <!-- Planet body -->
+              <circle cx="12" cy="12" r="5.5" />
+              <!-- Latitude line -->
+              <path d="M 8.5 10 A 5.5 5.5 0 0 0 15.5 14" opacity="0.6" stroke-dasharray="1 1" />
+              <!-- Astrological symbol: Crescent Moon on the top-left -->
+              <path d="M 4 6 A 2.5 2.5 0 0 1 7.5 9.5 A 2.5 2.5 0 0 0 4 6" />
+              <!-- Sparkle star on the top-right -->
+              <path d="M 18 7 L 18 11 M 16 9 L 20 9" stroke-width="1" />
+              <circle cx="18" cy="9" r="0.8" fill="currentColor" stroke="none" />
             </svg>
           </div>
           <h3>Người Yêu Huyền Học</h3>
@@ -256,7 +303,7 @@
   <section class="section benefits-section" id="benefits">
     <!-- Video background -->
     <video class="benefits-video-bg" muted playsinline loop preload="none">
-      <source src="intro.mp4" type="video/mp4">
+      <source src="intro%20.mp4" type="video/mp4">
     </video>
     <!-- Dark overlay to keep content readable -->
     <div class="benefits-overlay"></div>
