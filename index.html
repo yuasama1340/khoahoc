@@ -4,17 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Journey of Clow – Khoá Học Bài Clow Huyền Bí</title>
-  <meta name="description" content="Khám phá hành trình huyền bí cùng Khoá học The Journey of Clow. Học bài Clow/Sakura cùng Clow Cat Patronus – hơn 10 năm kinh nghiệm Huyền Học, 120+ học viên, 20+ khoá." />
+  <meta name="description" content="Khám phá hành trình huyền bí cùng Khoá học The Journey of Clow. Học bài Clow/Sakura cùng Clow Cat Patronus – hơn 10 năm kinh nghiệm Huyền Học, 150+ học viên, 20+ khoá." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_v53.css" />
   <link rel="icon" type="image/jpeg" href="hinh/logofavicon.jpg" />
   
   <!-- Cải thiện hiệu năng -->
-  <link rel="preload" href="tieude.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="./tieude.ttf" as="font" type="font/ttf">
+  <link rel="preload" href="./style_v53.css" as="style">
+  <style>
+    /* Override ALL remaining teal/blue with purple/gold */
+    :root {
+      --teal: #7B3FAE !important;
+      --teal-light: #C090E0 !important;
+      --teal-dark: #5A2D88 !important;
+      --pink: #9B60C8 !important;
+      --pink-light: #E8B88A !important;
+    }
+    /* Ensure normal text is readable on pastel backgrounds */
+    body {
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .section-title {
+      color: #FFF2C8 !important; /* Brighter solid gold/yellow */
+      text-shadow: 0px 0px 10px rgba(255, 212, 121, 0.8), 0px 0px 4px rgba(255, 255, 255, 0.6) !important; /* Bright glowing outline */
+      -webkit-text-stroke: 1px rgba(255, 212, 121, 0.5) !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      width: fit-content !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: block !important;
+      filter: none !important; /* Remove bugged drop-shadow */
+    }
+
+    .benefit-card h3 {
+      color: #FFD479 !important; /* Bright solid gold */
+      text-shadow: 0px 4px 12px rgba(40, 15, 65, 0.9), 0px 2px 4px rgba(40, 15, 65, 0.8) !important; /* Sharp outer glow/shadow */
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      width: fit-content !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: block !important;
+      filter: none !important;
+    }
+    
+    .nav-links a {
+      text-shadow: 0px 1px 6px rgba(40, 15, 65, 0.8) !important;
+    }
+    /* FORCE nav to be white - NO teal/blue at all */
+    .nav-links a,
+    .nav-links li a,
+    nav a,
+    header a:not(.btn-nav) {
+      color: rgba(255, 255, 255, 0.88) !important;
+    }
+    .nav-links a.active-link,
+    .nav-links a:hover {
+      color: #E8B88A !important;
+    }
+    .nav-links a::after,
+    .nav-links a.active-link::after,
+    .nav-links a:hover::after {
+      background: linear-gradient(90deg, #7B3FAE, #D4935A) !important;
+    }
+    /* Kill all remaining teal in borders/glows */
+    [style*='teal'] { color: #D4935A !important; }
+  </style>
 </head>
 <body>
 
@@ -35,7 +100,7 @@
         <li><a href="#benefits">Quyền Lợi</a></li>
         <li><a href="#testimonials">Cảm Nhận</a></li>
         <li><a href="#pricing">Học Phí</a></li>
-        <li><a href="#register" class="btn-nav">Đăng Ký Ngay</a></li>
+        <li><a href="#register" class="btn-nav btn-gradient">Đăng Ký Ngay</a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -62,8 +127,8 @@
       </h1>
       <p class="hero-sub">Khám phá sức mạnh huyền bí của bộ bài Clow/Sakura • Chữa lành • Định hướng • Thấu hiểu bản thân</p>
       <div class="hero-cta">
-        <a href="#pricing" class="btn-primary" id="hero-btn-pricing">Xem Học Phí</a>
-        <a href="#register" class="btn-outline" id="hero-btn-register">Đăng Ký Ngay</a>
+        <a href="#pricing" class="btn-primary btn-gradient" id="hero-btn-pricing">Xem Học Phí</a>
+        <a href="#register" class="btn-outline btn-gradient" id="hero-btn-register">Đăng Ký Ngay</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -72,7 +137,7 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num">120+</span>
+          <span class="stat-num">150+</span>
           <span class="stat-label">Học viên</span>
         </div>
         <div class="stat-divider"></div>
@@ -94,7 +159,7 @@
     <!-- Background image -->
     <img
       class="about-gif-bg"
-      src="nenbg.jpg"
+      src="hinh/clow-for-who-bg.png"
       alt=""
       aria-hidden="true"
     />
@@ -280,7 +345,7 @@
                 <line x1="8" y1="17" x2="14" y2="17" />
               </svg>
             </span>
-            <span>Khai giảng từ <strong>2019</strong>, hơn <strong>20 khoá học</strong> với <strong>120+ học viên</strong></span>
+            <span>Khai giảng từ <strong>2019</strong>, hơn <strong>20 khoá học</strong> với <strong>150+ học viên</strong></span>
           </div>
           <div class="fact-item">
             <span class="fact-icon">
@@ -389,29 +454,45 @@
           
           <!-- Header -->
           <div class="pt-header-row">
-            <div class="pt-col-criteria"></div>
+            <div class="pt-col-criteria" style="position: relative;">
+              <div class="floating-cards-container">
+                <img src="hinh/labai1.jpg" class="floating-card card-1" alt="Lá bài 1">
+                <img src="hinh/labai2.jpg" class="floating-card card-2" alt="Lá bài 2">
+              </div>
+            </div>
             <div class="pt-col-pack beginner-pack">
-              <h3>Gói BEGINNER<br><span>(Cơ bản)</span></h3>
+              <div class="pack-circle-img-wrapper">
+                <img src="hinh/circle2.jpg" alt="Khoá Beginner" class="pack-circle-img">
+              </div>
+              <div class="pack-badge-row">
+                <div class="pack-pill">Cơ bản</div>
+              </div>
+              <h3>Khoá Beginer</h3>
             </div>
             <div class="pt-col-pack advance-pack">
-              <div class="pt-ribbon">Lựa chọn tối ưu</div>
-              <h3>Gói ADVANCE<br><span>(Cơ bản + Nâng cao)</span></h3>
+              <div class="pack-circle-img-wrapper">
+                <img src="hinh/circle3.jpg" alt="Khoá Advance" class="pack-circle-img">
+              </div>
+              <div class="pack-badge-row">
+                <div class="pack-pill active">Nâng cao</div>
+              </div>
+              <h3>Khoá Advance</h3>
             </div>
           </div>
 
           <!-- Info rows -->
           <div class="pt-row">
             <div class="pt-cell-criteria">Học phí</div>
-            <div class="pt-cell-val beginner-val">7.000.000đ</div>
+            <div class="pt-cell-val beginner-val price-highlight-beginner">7.500.000đ</div>
             <div class="pt-cell-val advance-val price-highlight">16.000.000đ</div>
           </div>
           <div class="pt-row">
-            <div class="pt-cell-criteria">Ưu đãi &<br>Thanh toán</div>
-            <div class="pt-cell-val beginner-val">Hỗ trợ trả góp linh hoạt</div>
-            <div class="pt-cell-val advance-val">Trả góp + <strong class="fomo-text">Giảm ngay 1.000.000đ</strong> (Early Bird)</div>
+            <div class="pt-cell-criteria">Ưu đãi & Thanh toán</div>
+            <div class="pt-cell-val beginner-val">Hỗ trợ trả góp + <strong class="fomo-text">tặng 1 bộ bài Clow Anime Version</strong> khi đăng ký Early Bird</div>
+            <div class="pt-cell-val advance-val">Hỗ trợ trả góp + <strong class="fomo-text">Giảm ngay 500.000đ & tặng 1 bộ bài Clow Anime Version</strong> khi đăng ký Early Bird</div>
           </div>
           <div class="pt-row">
-            <div class="pt-cell-criteria">Thời lượng &<br>Cam kết</div>
+            <div class="pt-cell-criteria">Thời lượng & Cam kết</div>
             <div class="pt-cell-val beginner-val">18 buổi<br>(1 tuần 2 buổi, 2 tiếng/buổi)</div>
             <div class="pt-cell-val advance-val"><strong>34 buổi</strong><br>(1 tuần 2 buổi, 2 tiếng/buổi)</div>
           </div>
@@ -452,7 +533,7 @@
             <div class="pt-cell-criteria">Tuyệt kỹ trải bài</div>
             <div class="pt-cell-val beginner-val">
               <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Làm chủ trải bài 7 lá, 10 lá và Tốc hành.
+              Nắm vững nguyên lý giải trải bài Tổng quan (10 lá), Tình cảm (7 lá), Tốc hành (4 lá)
             </div>
             <div class="pt-cell-val advance-val">
               <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
@@ -562,10 +643,10 @@
           <div class="pt-footer-row">
             <div class="pt-col-criteria"></div>
             <div class="pt-col-pack beginner-pack">
-              <a href="#register" class="btn-outline pt-btn" onclick="setTimeout(()=>{document.getElementById('reg-course').value='beginner'},400)">ĐĂNG KÝ BẢN BEGINNER</a>
+              <a href="#register" class="btn-outline pt-btn" onclick="setTimeout(()=>{let s=document.getElementById('reg-course'); s.value='beginner'; s.dispatchEvent(new Event('change'));},400)">ĐĂNG KÝ BẢN BEGINNER</a>
             </div>
             <div class="pt-col-pack advance-pack">
-              <a href="#register" class="btn-primary pt-btn" onclick="setTimeout(()=>{document.getElementById('reg-course').value='advance'},400)">ĐĂNG KÝ BẢN ADVANCE</a>
+              <a href="#register" class="btn-primary pt-btn btn-gradient" onclick="setTimeout(()=>{let s=document.getElementById('reg-course'); s.value='advance'; s.dispatchEvent(new Event('change'));},400)">ĐĂNG KÝ BẢN ADVANCE</a>
             </div>
           </div>
 
@@ -575,13 +656,16 @@
 
   <!-- ========== REQUIREMENTS ========== -->
   <section class="section requirements-section" id="requirements">
-    <!-- Background GIF -->
-    <img
+    <!-- Background Video -->
+    <video
       class="requirements-bg"
-      src="req_bg.gif"
-      alt=""
+      src="hinh/clow-video.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
       aria-hidden="true"
-    />
+    ></video>
     <!-- Dark overlay -->
     <div class="requirements-overlay"></div>
     <div class="section-inner" style="position:relative;z-index:2;">
@@ -720,6 +804,20 @@
             </div>
 
             <div class="form-group">
+              <label for="reg-course">Khoá học <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="reg-course" name="course" required>
+                  <option value="" disabled selected>-- Chọn khoá học --</option>
+                  <optgroup label="Khoá học">
+                    <option value="beginner">Khoá Beginner – Cơ Bản (7.500.000đ | 18 buổi)</option>
+                    <option value="advance">Khoá Advance – Cơ Bản + Nâng Cao (16.000.000đ | 34 buổi)</option>
+                  </optgroup>
+                </select>
+                <span class="select-arrow">⌄</span>
+              </div>
+            </div>
+
+            <div class="form-group">
               <label for="reg-mode">Hình thức <span class="req">*</span></label>
               <div class="select-wrap">
                 <select id="reg-mode" name="mode" required>
@@ -729,20 +827,6 @@
                   </optgroup>
                   <optgroup label="Offline">
                     <option value="offline-comma">Offline – The Comma Coffee, 21 Hoa Mai, Q. Phú Nhuận</option>
-                  </optgroup>
-                </select>
-                <span class="select-arrow">⌄</span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-course">Khoá học <span class="req">*</span></label>
-              <div class="select-wrap">
-                <select id="reg-course" name="course" required>
-                  <option value="" disabled selected>-- Chọn khoá học --</option>
-                  <optgroup label="Khoá học">
-                    <option value="beginner">Khoá Beginner – Cơ Bản (7.000.000đ | 18 buổi)</option>
-                    <option value="advance">Khoá Advance – Cơ Bản + Nâng Cao (16.000.000đ | 34 buổi)</option>
                   </optgroup>
                 </select>
                 <span class="select-arrow">⌄</span>
@@ -779,15 +863,16 @@
           <!-- Payment Step (hidden by default) -->
           <div class="reg-payment-step" id="payment-step" style="display:none; text-align:center;">
             <h4 style="margin-bottom: 8px;">Thanh Toán Chuyển Khoản</h4>
-            <p style="font-size:0.9rem; color:var(--light-text); margin-bottom: 16px;">Vui lòng quét mã QR hoặc chuyển khoản với nội dung: <strong>HỌ TÊN - SĐT</strong></p>
+            <p style="font-size:0.9rem; color:var(--light-text); margin-bottom: 16px;">Vui lòng quét mã QR hoặc chuyển khoản với nội dung hiển thị bên dưới:</p>
             
             <div class="qr-container" style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; border: 1px solid rgba(244,188,126,0.2); margin-bottom: 20px; display:inline-block;">
-              <img id="qr-image" src="https://img.vietqr.io/image/tpbank-0969302801-compact2.png?amount=0&addInfo=ThanhToan&accountName=PHAN%20THAI%20BAO" alt="QR Code Thanh Toán" style="width: 200px; max-width: 100%; border-radius: 8px; margin-bottom:12px;"/>
+              <img id="qr-image" src="https://img.vietqr.io/image/tpbank-0969302801-compact2.png?amount=0&addInfo=&accountName=PHAN%20THAI%20BAO" alt="QR Code Thanh Toán" style="width: 200px; max-width: 100%; border-radius: 8px; margin-bottom:12px;"/>
               <div class="payment-details" style="text-align: left; font-size: 0.9rem; line-height: 1.6;">
                 <div>Số tiền: <strong class="gold-text" id="payment-amount" style="font-size: 1.1rem;">0đ</strong></div>
                 <div>Ngân hàng: <strong>TPBank (Tiên Phong Bank)</strong></div>
                 <div>Số tài khoản: <strong>0969302801</strong></div>
                 <div>Chủ tài khoản: <strong>PHAN THAI BAO</strong></div>
+                <div>Nội dung: <strong class="gold-text" id="payment-content"></strong></div>
               </div>
             </div>
 
@@ -908,6 +993,6 @@
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="./script_v3.js"></script>
 </body>
 </html>

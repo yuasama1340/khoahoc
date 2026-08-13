@@ -117,7 +117,7 @@ function createSparkle() {
     position: absolute;
     width: ${Math.random() * 4 + 1}px;
     height: ${Math.random() * 4 + 1}px;
-    background: rgba(244,188,126,${Math.random() * 0.6 + 0.2});
+    background: rgba(232,112,164,${Math.random() * 0.6 + 0.2});
     border-radius: 50%;
     left: ${Math.random() * 100}%;
     top: ${Math.random() * 100}%;
@@ -159,17 +159,45 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
-// Add active link style
-const activeLinkStyle = document.createElement('style');
-activeLinkStyle.textContent = `
-  .nav-links a.active-link {
-    color: var(--gold) !important;
+// ===== COMPREHENSIVE COLOR OVERRIDE – purple/gold palette =====
+const colorOverrideStyle = document.createElement('style');
+colorOverrideStyle.textContent = `
+  /* Force ALL nav links white, NO teal/blue */
+  .nav-links a,
+  .nav-links li a,
+  header .nav-links a {
+    color: rgba(255, 255, 255, 0.88) !important;
   }
-  .nav-links a.active-link::after {
+  .nav-links a.active-link,
+  .nav-links a:hover {
+    color: #E8B88A !important;
+  }
+  .nav-links a::after {
+    background: linear-gradient(90deg, #7B3FAE, #D4935A) !important;
+  }
+  .nav-links a.active-link::after,
+  .nav-links a:hover::after {
     transform: scaleX(1) !important;
+    background: linear-gradient(90deg, #7B3FAE, #D4935A) !important;
+  }
+
+  /* Section tags – gold not teal */
+  .section-tag { color: #D4935A !important; }
+  .section-tag::before { background: linear-gradient(90deg, transparent, #D4935A) !important; }
+  .section-tag::after  { background: linear-gradient(90deg, #B080D8, transparent) !important; }
+
+  /* Kill all remaining teal/cyan color usages */
+  :root {
+    --teal:       #7B3FAE !important;
+    --teal-light: #C090E0 !important;
+    --teal-dark:  #5A2D88 !important;
+    --pink:       #9B60C8 !important;
+    --pink-light: #E8B88A !important;
+    --blue:       #5A2D88 !important;
+    --blue-light: #8A5CC0 !important;
   }
 `;
-document.head.appendChild(activeLinkStyle);
+document.head.appendChild(colorOverrideStyle);
 
 // ---- COUNTER ANIMATION for hero stats ----
 function animateCounter(el, target, duration = 2000) {
@@ -232,6 +260,7 @@ function handleRegisterSubmit(e) {
   // Cập nhật số tiền và mã QR
   const amountText = new Intl.NumberFormat('vi-VN').format(amount) + 'đ';
   document.getElementById('payment-amount').innerText = amountText;
+  document.getElementById('payment-content').innerText = `${courseStr} ${phone}`;
   document.getElementById('qr-image').src = `https://img.vietqr.io/image/tpbank-0969302801-compact2.png?amount=${amount}&addInfo=${transferContent}&accountName=PHAN%20THAI%20BAO`;
 
   // Lưu dữ liệu form vào biến toàn cục để gửi sau khi thanh toán
@@ -509,7 +538,7 @@ if (heroSectionForStars) {
     const size = Math.random() * 3 + 1; // 1px to 4px
     const delay = Math.random() * -5;
     const duration = Math.random() * 3 + 2; // 2s to 5s
-    const colors = ['rgba(255,255,255,0.8)', 'rgba(244,188,126,0.8)', 'rgba(253,221,179,0.8)'];
+    const colors = ['rgba(255,255,255,0.85)', 'rgba(232,112,164,0.85)', 'rgba(244,188,126,0.8)', 'rgba(155,126,212,0.75)', 'rgba(46,200,216,0.75)', 'rgba(245,174,206,0.7)'];
     const color = colors[Math.floor(Math.random() * colors.length)];
     
     star.style.left = `${left}%`;
@@ -615,16 +644,15 @@ createFallingCards();
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof Swiper !== 'undefined') {
     new Swiper('.feedback-swiper', {
-      effect: 'coverflow',
+      effect: 'cards',
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
-      loop: true,
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 150,
-        modifier: 1.5,
+      loop: false, // cards effect sometimes glitches with loop on many items, false is safer
+      cardsEffect: {
+        perSlideOffset: 8,
+        perSlideRotate: 2,
+        rotate: true,
         slideShadows: false,
       },
       pagination: {
@@ -634,15 +662,50 @@ document.addEventListener('DOMContentLoaded', () => {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        320: {
-          coverflowEffect: { modifier: 1 }
-        },
-        768: {
-          coverflowEffect: { modifier: 1.5 }
-        }
       }
     });
+  }
+});
+
+// ============================================
+// DYNAMIC FORM LOGIC
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  const courseSelect = document.getElementById('reg-course');
+  const modeSelect = document.getElementById('reg-mode');
+
+  if (courseSelect && modeSelect) {
+    const updateModeOptions = () => {
+      const isBeginner = courseSelect.value === 'beginner';
+      
+      // Get all offline options and optgroups
+      const offlineOptgroup = modeSelect.querySelector('optgroup[label="Offline"]');
+      const offlineOptions = modeSelect.querySelectorAll('option[value*="offline"]');
+      
+      if (isBeginner) {
+        // Disable and hide offline options
+        if (offlineOptgroup) offlineOptgroup.style.display = 'none';
+        offlineOptions.forEach(opt => {
+          opt.disabled = true;
+          opt.hidden = true;
+        });
+        
+        // If current selection is offline, reset it
+        if (modeSelect.value && modeSelect.value.includes('offline')) {
+          modeSelect.value = '';
+        }
+      } else {
+        // Enable and show offline options
+        if (offlineOptgroup) offlineOptgroup.style.display = '';
+        offlineOptions.forEach(opt => {
+          opt.disabled = false;
+          opt.hidden = false;
+        });
+      }
+    };
+
+    courseSelect.addEventListener('change', updateModeOptions);
+    // Run on init in case a value is pre-selected
+    updateModeOptions();
   }
 });
