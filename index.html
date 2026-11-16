@@ -9,12 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style_v53.css" />
+  <link rel="stylesheet" href="style_v53.css?v=feedback-3d" />
   <link rel="icon" type="image/jpeg" href="hinh/logofavicon.jpg" />
   
   <!-- Cải thiện hiệu năng -->
   <link rel="preload" href="./tieude.ttf" as="font" type="font/ttf">
-  <link rel="preload" href="./style_v53.css" as="style">
+  <link rel="preload" href="style_v53.css?v=feedback-3d" as="style">
   <style>
     /* Override ALL remaining teal/blue with purple/gold */
     :root {
@@ -98,8 +98,8 @@
         <li><a href="#about">Về Khoá Học</a></li>
         <li><a href="#instructor">Người Dạy</a></li>
         <li><a href="#benefits">Quyền Lợi</a></li>
-        <li><a href="#testimonials">Cảm Nhận</a></li>
         <li><a href="#pricing">Học Phí</a></li>
+        <li><a href="#testimonials">Cảm Nhận</a></li>
         <li><a href="#register" class="btn-nav btn-gradient">Đăng Ký Ngay</a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
@@ -379,7 +379,7 @@
         <div class="benefit-card">
           <div class="benefit-num">01</div>
           <h3>Khai Phá Bản Thân</h3>
-          <p>Mở rộng góc nhìn, thấu suốt giá trị và năng lực cá nhân qua các hệ thống biểu tượng (Bài Clow, Chiêm Tinh, Nhân Số học,...).</p>
+          <p>Dùng các lá bài Clow để nhìn lại cảm xúc, suy nghĩ và cách mình hành động trước những chuyện đang diễn ra.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-num">02</div>
@@ -405,6 +405,157 @@
   <!-- ========== FALLING CARDS WRAPPER FOR BACKGROUND ANIMATION ========== -->
   <div class="falling-cards-wrapper" id="falling-cards-container">
 
+    <!-- ========== PRICING ========== -->
+    <section class="section pricing-table-section" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-magic-circle spin-slow" aria-hidden="true"></div>
+      <div class="pricing-bg-deco" aria-hidden="true"></div>
+
+      <div class="section-inner">
+        <div class="journey-intro">
+          <div class="journey-decoration" aria-hidden="true">
+            <img src="hinh/labai1.jpg" class="floating-card card-1" alt="" loading="lazy">
+            <img src="hinh/labai2.jpg" class="floating-card card-2" alt="" loading="lazy">
+          </div>
+          <div class="section-tag">LỘ TRÌNH & HỌC PHÍ</div>
+          <h2 class="section-title" id="pricing-title">Chọn Hành Trình Của Bạn</h2>
+          <p class="section-desc">Cùng Clow Cat Patronus, bạn dùng bài Clow để nhìn rõ điều mình đang trải qua, tập đặt câu hỏi cho chính mình và tìm bước tiếp theo phù hợp.</p>
+          <p class="journey-start">✦ Chưa từng học Clow? Bạn có thể bắt đầu với Beginner hoặc Master Path.</p>
+        </div>
+
+        <div class="journey-grid">
+          <article class="pt-col-pack journey-card" id="journey-beginner" aria-labelledby="journey-beginner-title">
+            <div class="pack-circle-img-wrapper" aria-hidden="true">
+              <img src="hinh/circle2.jpg" class="pack-circle-img" alt="" loading="lazy">
+            </div>
+            <div class="pack-badge-row"><span class="pack-pill">Bắt đầu từ số 0</span></div>
+            <h3 id="journey-beginner-title">Beginner</h3>
+            <p class="journey-promise">Tự dùng Clow để hiểu mình</p>
+            <p class="journey-fit">Phù hợp nếu bạn mới biết Clow và muốn hiểu mình rõ hơn trước khi tư vấn cho ai.</p>
+            <div class="journey-facts">
+              <p class="price-highlight">7.500.000đ</p>
+              <p class="journey-duration">16 buổi · 8 tuần</p>
+              <p class="journey-rate"><strong>Khoảng 469.000đ</strong> / buổi</p>
+            </div>
+            <ul class="journey-outcomes">
+              <li><strong>Tự soi chiếu qua 6 nhóm nguyên tố</strong> để hiểu mình đang nghĩ gì, cảm thấy gì và nên làm gì tiếp.</li>
+              <li><strong>Đặt câu hỏi khai vấn</strong> đi vào vấn đề cụ thể. Tập đưa lời khuyên thực tế, đúng với đạo đức của một Reader.</li>
+              <li><strong>12 buổi Phỏng vấn bản thân.</strong> Mỗi nguyên tố có một buổi học và rút bài, một buổi chia sẻ chuyện của mình để cùng chiêm nghiệm.</li>
+            </ul>
+            <a href="#register" class="btn-outline pt-btn journey-cta" data-course="beginner">Chọn Beginner</a>
+            <details class="journey-details" name="course-curriculum">
+              <summary>Xem lộ trình 16 buổi</summary>
+              <h4>Từ nền tảng đến tự soi chiếu</h4>
+              <ol class="journey-timeline">
+                <li><span>Buổi 1–2</span><strong>Nền tảng huyền học</strong><p>Biết khi nào có thể dùng Clow và hiểu giới hạn của người đọc bài.</p></li>
+                <li><span>Buổi 3–4</span><strong>Khai vấn và đạo đức Reader</strong><p>Luyện hỏi với SMART và 5W1H theo cặp. Tập đưa lời khuyên thực tế và để người nghe tự quyết định.</p></li>
+                <li><span>Buổi 5–16</span><strong>Phỏng vấn bản thân qua 6 nguyên tố</strong><p>Mỗi nguyên tố có 2 buổi: học và rút bài, rồi chia sẻ câu chuyện của mình để chiêm nghiệm.</p></li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="pt-col-pack journey-card" id="journey-advance" aria-labelledby="journey-advance-title">
+            <div class="pack-circle-img-wrapper" aria-hidden="true">
+              <img src="hinh/circle3.jpg" class="pack-circle-img" alt="" loading="lazy">
+            </div>
+            <div class="pack-badge-row"><span class="pack-pill">Đã có nền tảng Clow</span></div>
+            <h3 id="journey-advance-title">Advance</h3>
+            <p class="journey-promise">Tư vấn cho người khác có quy trình</p>
+            <p class="journey-fit">Phù hợp nếu bạn đã có nền tảng Clow và muốn tự tin dẫn một buổi đọc bài cho người khác.</p>
+            <div class="journey-facts">
+              <p class="price-highlight">10.500.000đ</p>
+              <p class="journey-duration">16 buổi · 8 tuần</p>
+              <p class="journey-rate"><strong>Khoảng 656.000đ</strong> / buổi</p>
+            </div>
+            <ul class="journey-outcomes">
+              <li><strong>Luyện 4 dạng trải bài</strong> cho công việc (10 lá), tình cảm (7 lá), một vấn đề cụ thể (4 lá) và các lựa chọn.</li>
+              <li><strong>Đọc Ẩn chính, Ẩn phụ và tổ hợp lá</strong> để nhận ra chiều của cả trải bài. Dành 7 buổi học sâu các lá Thủ lĩnh như The Light và The Dark.</li>
+              <li><strong>4 buổi Ghế nóng (Hot Seat).</strong> Tư vấn theo cặp rồi cùng Clow Cat Patronus và cả lớp phân tích những trải bài khó.</li>
+              <li><strong>Reset năng lượng trước và sau ca.</strong> Dùng bài Phỏng vấn bản thân để nhận ra trạng thái của mình và lấy lại sự tập trung.</li>
+            </ul>
+            <div class="journey-gift">
+              <span class="journey-label">✦ QUÀ TẶNG</span>
+              <p><strong>Bản đồ sao Mặt Trời hồi vị</strong> để định hướng cho năm sắp tới.</p>
+            </div>
+            <a href="#register" class="btn-outline pt-btn journey-cta" data-course="advance">Chọn Advance</a>
+            <details class="journey-details" name="course-curriculum">
+              <summary>Xem lộ trình 16 buổi</summary>
+              <h4>Từ kỹ thuật đọc bài đến thực hành tư vấn</h4>
+              <ol class="journey-timeline">
+                <li><span>Buổi 1–2</span><strong>Bốn dạng trải bài</strong><p>Luyện trải công việc 10 lá, tình cảm 7 lá, tốc hành 4 lá và trải bài lựa chọn.</p></li>
+                <li><span>Buổi 3–5</span><strong>Đọc mạch chung của trải bài</strong><p>Kết hợp Ẩn chính, Ẩn phụ và các tổ hợp lá để nhận ra chiều tích cực hay tiêu cực của cả trải bài.</p></li>
+                <li><span>Buổi 6–12</span><strong>Đọc sâu các lá Thủ lĩnh</strong><p>Học các lá như The Light, The Dark và dùng bài Phỏng vấn bản thân để nhìn lại sự thay đổi của mình.</p></li>
+                <li><span>Buổi 13–16</span><strong>Ghế nóng và Reset năng lượng</strong><p>Tư vấn theo cặp và phân tích trải bài khó cùng Clow Cat Patronus. Dùng bài Phỏng vấn bản thân để lấy lại sự tập trung trước và sau ca.</p></li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="pt-col-pack journey-card journey-featured" id="journey-full-stack" aria-labelledby="journey-full-stack-title">
+            <div class="pack-circle-img-wrapper">
+              <img src="hinh/full-stack-logo.png" class="pack-circle-img journey-emblem" alt="Biểu tượng mặt trời của lộ trình Master Path" loading="lazy">
+            </div>
+            <div class="pack-badge-row"><span class="pack-pill active">Lộ trình trọn vẹn</span></div>
+            <h3 id="journey-full-stack-title">Master Path</h3>
+            <p class="journey-promise">Clow Cat Patronus đồng hành trọn 16 tuần</p>
+            <p class="journey-fit">Phù hợp nếu bạn muốn bắt đầu từ số 0 và theo đuổi việc đọc bài lâu dài.</p>
+            <div class="journey-facts">
+              <p class="price-highlight">16.000.000đ</p>
+              <p class="journey-duration">32 buổi · 16 tuần</p>
+              <p class="journey-rate"><strong>500.000đ</strong> / buổi</p>
+            </div>
+            <ul class="journey-outcomes">
+              <li><strong>8 tuần Beginner.</strong> Học cách tự đặt câu hỏi và dùng trải bài Phỏng vấn bản thân để hiểu mình.</li>
+              <li><strong>8 tuần Advance.</strong> Tập tư vấn cho người khác, rồi dùng lại chính trải bài đó để Reset trước và sau mỗi ca.</li>
+            </ul>
+            <p class="journey-bridge">Bạn học đọc chính mình trước, rồi dùng kỹ năng đó để chuẩn bị cho từng buổi tư vấn.</p>
+            <p class="journey-saving"><strong>Tiết kiệm 2.000.000đ</strong> so với đăng ký riêng hai khóa.</p>
+            <div class="journey-gift journey-gift-choice">
+              <img src="hinh/clow-anime-version-back.jpg" width="60" height="131" alt="Mặt lưng bộ bài Clow Anime Version" loading="lazy">
+              <div class="journey-gift-copy">
+                <span class="journey-label">✦ CHỌN 1 TRONG 2 QUÀ</span>
+                <p><strong>Bộ bài Clow Anime Version</strong> để thực hành.</p>
+                <p>Hoặc <strong>Bản đồ sao Mặt Trời hồi vị</strong> để định hướng cho năm sắp tới.</p>
+              </div>
+              <img src="hinh/bandosao.jpg" width="736" height="1472" alt="Bản đồ sao Mặt Trời hồi vị" loading="lazy">
+            </div>
+            <a href="#register" class="btn-primary btn-gradient pt-btn journey-cta" data-course="full-stack">Chọn Master Path</a>
+            <details class="journey-details" name="course-curriculum">
+              <summary>Xem lộ trình 32 buổi</summary>
+              <h4>Chặng 1 · Beginner</h4>
+              <ol class="journey-timeline">
+                <li><span>Buổi 1–2</span><strong>Nền tảng huyền học</strong><p>Biết khi nào có thể dùng Clow và hiểu giới hạn của người đọc bài.</p></li>
+                <li><span>Buổi 3–4</span><strong>Khai vấn và đạo đức Reader</strong><p>Luyện hỏi với SMART và 5W1H theo cặp. Tập đưa lời khuyên thực tế và để người nghe tự quyết định.</p></li>
+                <li><span>Buổi 5–16</span><strong>Phỏng vấn bản thân qua 6 nguyên tố</strong><p>Mỗi nguyên tố có 2 buổi: học và rút bài, rồi chia sẻ câu chuyện của mình để chiêm nghiệm.</p></li>
+              </ol>
+              <h4>Chặng 2 · Advance</h4>
+              <ol class="journey-timeline">
+                <li><span>Buổi 17–18</span><strong>Bốn dạng trải bài</strong><p>Luyện trải công việc 10 lá, tình cảm 7 lá, tốc hành 4 lá và trải bài lựa chọn.</p></li>
+                <li><span>Buổi 19–21</span><strong>Đọc mạch chung của trải bài</strong><p>Kết hợp Ẩn chính, Ẩn phụ và các tổ hợp lá để nhận ra chiều tích cực hay tiêu cực của cả trải bài.</p></li>
+                <li><span>Buổi 22–28</span><strong>Đọc sâu các lá Thủ lĩnh</strong><p>Học các lá như The Light, The Dark và dùng bài Phỏng vấn bản thân để nhìn lại sự thay đổi của mình.</p></li>
+                <li><span>Buổi 29–32</span><strong>Ghế nóng và Reset năng lượng</strong><p>Tư vấn theo cặp và phân tích trải bài khó cùng Clow Cat Patronus. Dùng bài Phỏng vấn bản thân để lấy lại sự tập trung trước và sau ca.</p></li>
+              </ol>
+            </details>
+          </article>
+        </div>
+
+        <section class="journey-values" aria-labelledby="journey-compare-title">
+          <h3 id="journey-compare-title">So sánh nhanh 3 lộ trình</h3>
+          <p class="journey-scroll-hint">Vuốt ngang để xem cả 3 gói.</p>
+          <div class="journey-table-wrap" tabindex="0" role="region" aria-labelledby="journey-compare-title">
+            <table class="journey-compare" aria-labelledby="journey-compare-title">
+              <thead><tr><th scope="col">Tiêu chí</th><th scope="col">Beginner</th><th scope="col">Advance</th><th scope="col">Master Path</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Ai phù hợp</th><td>Người mới muốn hiểu mình</td><td>Đã có nền tảng, muốn tư vấn</td><td>Muốn học từ đầu và đi cả hai chặng</td></tr>
+                <tr><th scope="row">Mục tiêu</th><td>Tự soi chiếu và chọn bước tiếp theo</td><td>Dẫn buổi đọc bài có quy trình</td><td>Tự soi chiếu, tư vấn và Reset trước/sau ca</td></tr>
+                <tr><th scope="row">Thời lượng</th><td>16 buổi · 8 tuần</td><td>16 buổi · 8 tuần</td><td>32 buổi · 16 tuần</td></tr>
+                <tr><th scope="row">Thực hành chính</th><td>Phỏng vấn bản thân qua 6 nguyên tố</td><td>4 buổi Ghế nóng và Reset năng lượng</td><td>Cả Phỏng vấn bản thân và Ghế nóng</td></tr>
+                <tr><th scope="row">Quà tặng</th><td>—</td><td>Bản đồ sao Mặt Trời hồi vị</td><td>Chọn bộ Clow Anime Version hoặc Bản đồ sao Mặt Trời hồi vị</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+
     <!-- ========== TESTIMONIALS ========== -->
     <section class="section testimonials-section" id="testimonials">
       <div class="section-inner testimonials-inner" style="max-width: 100%; padding: 0;">
@@ -429,227 +580,24 @@
             <div class="swiper-slide"><div class="testimonial-item"><img src="hinh/feedback15.jpg" alt="Cảm nhận học viên 15" loading="lazy" /></div></div>
           </div>
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <button class="swiper-button-prev" type="button" aria-label="Cảm nhận trước"></button>
+          <button class="swiper-button-next" type="button" aria-label="Cảm nhận tiếp theo"></button>
         </div>
       </div>
     </section>
 
-    <!-- ========== PRICING TABLE ========== -->
-    <!-- ========== PRICING TABLE ========== -->
-    <section class="section pricing-table-section" id="pricing">
-      <!-- Magic circle background rotation -->
-      <div class="pricing-magic-circle spin-slow"></div>
-      <div class="pricing-bg-deco"></div>
-      
+    <section class="section journey-faq" aria-labelledby="journey-faq-title">
       <div class="section-inner">
-        <div class="section-tag">HỌC PHÍ & SO SÁNH</div>
-        <h2 class="section-title">Chọn Hành Trình Của Bạn</h2>
-        <p class="section-desc">
-          Nhìn rõ những gì bạn nhận được để chọn đúng hành trình cho bản thân<br>
-          <span style="color: var(--gold); display: block; margin-top: 6px; font-weight: 500;">✦ Cả 2 khoá đều phù hợp cho người mới bắt đầu từ số 0 ✦</span>
-        </p>
-
-        <div class="pricing-table-container">
-          
-          <!-- Header -->
-          <div class="pt-header-row">
-            <div class="pt-col-criteria" style="position: relative;">
-              <div class="floating-cards-container">
-                <img src="hinh/labai1.jpg" class="floating-card card-1" alt="Lá bài 1">
-                <img src="hinh/labai2.jpg" class="floating-card card-2" alt="Lá bài 2">
-              </div>
-            </div>
-            <div class="pt-col-pack beginner-pack">
-              <div class="pack-circle-img-wrapper">
-                <img src="hinh/circle2.jpg" alt="Khoá Beginner" class="pack-circle-img">
-              </div>
-              <div class="pack-badge-row">
-                <div class="pack-pill">Cơ bản</div>
-              </div>
-              <h3>Khoá Beginer</h3>
-            </div>
-            <div class="pt-col-pack advance-pack">
-              <div class="pack-circle-img-wrapper">
-                <img src="hinh/circle3.jpg" alt="Khoá Advance" class="pack-circle-img">
-              </div>
-              <div class="pack-badge-row">
-                <div class="pack-pill active">Nâng cao</div>
-              </div>
-              <h3>Khoá Advance</h3>
-            </div>
-          </div>
-
-          <!-- Info rows -->
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Học phí</div>
-            <div class="pt-cell-val beginner-val price-highlight-beginner">7.500.000đ</div>
-            <div class="pt-cell-val advance-val price-highlight">16.000.000đ</div>
-          </div>
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Ưu đãi & Thanh toán</div>
-            <div class="pt-cell-val beginner-val">Hỗ trợ trả góp + <strong class="fomo-text">tặng 1 bộ bài Clow Anime Version</strong> khi đăng ký Early Bird</div>
-            <div class="pt-cell-val advance-val">Hỗ trợ trả góp + <strong class="fomo-text">Giảm ngay 500.000đ & tặng 1 bộ bài Clow Anime Version</strong> khi đăng ký Early Bird</div>
-          </div>
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Thời lượng & Cam kết</div>
-            <div class="pt-cell-val beginner-val">18 buổi<br>(1 tuần 2 buổi, 2 tiếng/buổi)</div>
-            <div class="pt-cell-val advance-val"><strong>34 buổi</strong><br>(1 tuần 2 buổi, 2 tiếng/buổi)</div>
-          </div>
-
-          <!-- Group 1 -->
-          <div class="pt-group-header">
-            <svg class="pt-group-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              <path d="M12 6v6M10 9h4"></path>
-            </svg>
-            <span>NỀN TẢNG KIẾN THỨC & KỸ NĂNG</span>
-          </div>
-          
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Tư duy ứng dụng & Nguyên tố</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Hiểu nền tảng Huyền học, ứng dụng thực tế. Dành <strong class="highlight-text">9 buổi</strong> để học hành trình & ý nghĩa 6 nhóm nguyên tố (gộp chung 2-3 nhóm/buổi để học nhanh).
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              <strong>Ứng dụng chuyên sâu.</strong> Dành tới <strong class="highlight-text">17 buổi</strong> mổ xẻ chi tiết hành trình & ý nghĩa từng nguyên tố riêng biệt, kết hợp Ngũ hành Nhật Bản và Vòng tròn nhận thức & cảm xúc.
-            </div>
-          </div>
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Năng lực giải bài</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Đọc ý nghĩa 52 lá, giải tốt trải bài cơ bản & phỏng vấn bản thân.
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              <strong>Đọc bài nhanh, sắc bén</strong> nhờ 32 Combo. Thành thục trải bài Phỏng vấn ở mọi khía cạnh.
-            </div>
-          </div>
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Tuyệt kỹ trải bài</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Nắm vững nguyên lý giải trải bài Tổng quan (10 lá), Tình cảm (7 lá), Tốc hành (4 lá)
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              <strong>Nắm vững những trải bài cơ bản kèm thực hành trực tiếp.</strong> Đồng thời được hướng dẫn giải <strong>trải bài định hướng 12 tháng</strong> - một trong những trải bài khó nhất.
-            </div>
-          </div>
-
-          <!-- Group 2: Emotional -->
-          <div class="pt-group-header focal-point">
-            <svg class="pt-group-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 9v6M9 12h6"></path>
-            </svg>
-            <span>GIÁ TRỊ CẢM XÚC & SỰ CHUYỂN HÓA BẢN THÂN</span>
-          </div>
-          
-          <div class="pt-row focal-row">
-            <div class="pt-cell-criteria">Chữa lành & Đồng hành</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-row-svg mystical-icon mystical-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-              Hiểu thông điệp lá bài để tự định hướng.
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-row-svg mystical-icon mystical-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-              <strong>Được lắng nghe và chữa lành:</strong> Giảng viên trực tiếp đồng hành, lắng nghe nỗi đau qua từng lá bài và trao giải pháp khắc phục thực tế.
-            </div>
-          </div>
-          <div class="pt-row focal-row">
-            <div class="pt-cell-criteria">Chuyển hóa Tâm thức</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-row-svg mystical-icon mystical-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              Bắt đầu xây dựng thói quen nhìn nhận vấn đề đa chiều.
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-row-svg mystical-icon mystical-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              <strong class="bold-impact">Hành trình lột xác:</strong> Có thời gian đủ dài, đủ sâu để rèn luyện thay đổi tâm thức, thói quen và nâng tầm kỹ năng sống.
-            </div>
-          </div>
-          <div class="pt-row focal-row">
-            <div class="pt-cell-criteria">Sức nặng Lời nói</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-row-svg mystical-icon mystical-feather" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="6.5"/></svg>
-              Biết cách cho lời khuyên có trách nhiệm, tăng độ uy tín.
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-row-svg mystical-icon mystical-feather" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="6.5"/></svg>
-              <strong>Sắc bén trong khai vấn:</strong> Nắm vững nghệ thuật đặt câu hỏi, tăng tối đa trọng lượng trong từng lời nói tư vấn.
-            </div>
-          </div>
-          <div class="pt-row focal-row">
-            <div class="pt-cell-criteria">Mở rộng Thế giới quan</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-row-svg mystical-icon mystical-orbit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)"/></svg>
-              Có nền tảng nguyên lý để tự nghiên cứu môn khác.
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-row-svg mystical-icon mystical-orbit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)"/></svg>
-              <strong>Đặc quyền Networking:</strong> Được kết nối với các Mentor Huyền học lĩnh vực khác để có thêm góc nhìn về bản thân và cuộc sống.
-            </div>
-          </div>
-
-          <!-- Group 3 -->
-          <div class="pt-group-header">
-            <svg class="pt-group-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="10" r="8"></circle>
-              <path d="M12 18v4M9 22h6M8 10a4 4 0 0 1 4-4"></path>
-            </svg>
-            <span>ĐỊNH HƯỚNG NGHỀ NGHIỆP READER</span>
-          </div>
-          
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Đạo đức làm nghề</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Xây dựng tư duy vững chắc để trở thành Reader Giỏi & Tốt.
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Hoàn thiện trọn vẹn chân dung một Reader chuyên nghiệp, có tâm và có tầm.
-            </div>
-          </div>
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Định giá Dịch vụ</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Định hình phong cách xem bài phù hợp năng lực bản thân.
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-star-svg advance-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              <strong class="bold-impact">Sẵn sàng kiếm tiền:</strong> Giảng viên trực tiếp giúp định hình phong cách và <strong>cố vấn mức phí tư vấn</strong> xem bài.
-            </div>
-          </div>
-          <div class="pt-row">
-            <div class="pt-cell-criteria">Bảo chứng năng lực</div>
-            <div class="pt-cell-val beginner-val">
-              <svg class="magic-star-svg beginner-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="currentColor"/></svg>
-              Đủ nền tảng, tư duy và đạo đức để tự tin <strong>hành nghề độc lập.</strong>
-            </div>
-            <div class="pt-cell-val advance-val">
-              <svg class="magic-row-svg row-chalice advance-chalice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a6 6 0 0 0-6 6v3c0 3 3 5 6 5s6-2 6-5V8a6 6 0 0 0-6-6zM6 8h12M9 16v4M7 20h10"/></svg>
-              <strong>Được Tổng kết và Cấp chứng chỉ</strong> chính thức sau khóa học để gia tăng uy tín cá nhân.
-            </div>
-          </div>
-
-          <!-- Footer CTAs -->
-          <div class="pt-footer-row">
-            <div class="pt-col-criteria"></div>
-            <div class="pt-col-pack beginner-pack">
-              <a href="#register" class="btn-outline pt-btn" onclick="setTimeout(()=>{let s=document.getElementById('reg-course'); s.value='beginner'; s.dispatchEvent(new Event('change'));},400)">ĐĂNG KÝ BẢN BEGINNER</a>
-            </div>
-            <div class="pt-col-pack advance-pack">
-              <a href="#register" class="btn-primary pt-btn btn-gradient" onclick="setTimeout(()=>{let s=document.getElementById('reg-course'); s.value='advance'; s.dispatchEvent(new Event('change'));},400)">ĐĂNG KÝ BẢN ADVANCE</a>
-            </div>
-          </div>
-
+        <div class="journey-values">
+          <h3 id="journey-faq-title">Câu hỏi trước khi chọn khóa</h3>
+          <details class="journey-details">
+            <summary>Chưa biết gì về bài Clow có học được không?</summary>
+            <p>Có. Beginner bắt đầu từ nền tảng. Bạn cũng có thể chọn Master Path nếu muốn Clow Cat Patronus đồng hành từ lúc làm quen với bài đến khi thực hành tư vấn.</p>
+          </details>
+          <details class="journey-details">
+            <summary>Chỉ muốn tự soi chiếu thì có cần học Advance không?</summary>
+            <p>Beginner là lựa chọn phù hợp nếu bạn muốn đặt câu hỏi và dùng bài để hiểu mình. Advance dành cho lúc bạn muốn tập đọc và tư vấn cho người khác.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -809,8 +757,9 @@
                 <select id="reg-course" name="course" required>
                   <option value="" disabled selected>-- Chọn khoá học --</option>
                   <optgroup label="Khoá học">
-                    <option value="beginner">Khoá Beginner – Cơ Bản (7.500.000đ | 18 buổi)</option>
-                    <option value="advance">Khoá Advance – Cơ Bản + Nâng Cao (16.000.000đ | 34 buổi)</option>
+                    <option value="beginner" data-price="7500000" data-deposit="3000000" data-title="Beginner">Beginner (7.500.000đ · 16 buổi)</option>
+                    <option value="advance" data-price="10500000" data-title="Advance">Advance (10.500.000đ · 16 buổi)</option>
+                    <option value="full-stack" data-price="16000000" data-title="Master Path">Master Path (16.000.000đ · 32 buổi)</option>
                   </optgroup>
                 </select>
                 <span class="select-arrow">⌄</span>
@@ -844,9 +793,9 @@
                 <span class="select-arrow">⌄</span>
               </div>
               <div id="payment-installment-desc" class="payment-desc">
-                Với khoá Beginner bạn đóng trước phí giữ chỗ là 3.000.000đ. Phần phí còn lại chia đều cho các tháng.<br>
-                Với khoá Advance bạn đóng trước phí giữ chỗ là 4.000.000đ. Phần phí còn lại chia đều cho các tháng.
+                Với Beginner, bạn đóng trước phí giữ chỗ là 3.000.000đ. Phần học phí còn lại chia đều cho các tháng.
               </div>
+              <p id="payment-course-note" class="payment-desc">Nếu muốn hỏi về phương án trả góp cho khóa này, bạn có thể <a href="https://www.facebook.com/clowcatpatronus">nhắn Clow Cat Patronus</a> trước khi thanh toán.</p>
             </div>
 
             <div class="form-group">
@@ -944,8 +893,9 @@
         <div class="footer-col footer-col-right">
           <div class="footer-col-title">DỊCH VỤ</div>
           <ul class="footer-service-links">
-            <li><a href="#pricing">Khoá Beginner – Cơ Bản</a></li>
-            <li><a href="#pricing">Khoá Advance – Nâng Cao</a></li>
+            <li><a href="#journey-beginner">Khoá Beginner – Cơ Bản</a></li>
+            <li><a href="#journey-advance">Khoá Advance – Nâng Cao</a></li>
+            <li><a href="#journey-full-stack">Master Path – Lộ trình trọn vẹn</a></li>
             <li><a href="#pricing">Bảng Học Phí</a></li>
             <li><a href="#benefits">Quyền Lợi Học Viên</a></li>
             <li><a href="#register">Đăng Ký Ngay</a></li>
@@ -993,6 +943,6 @@
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./script_v3.js"></script>
+  <script src="./script_v3.js?v=feedback-3d"></script>
 </body>
 </html>

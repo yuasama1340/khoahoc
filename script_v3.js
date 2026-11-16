@@ -85,7 +85,6 @@ const animatableSelectors = [
   '.target-card',
   '.benefit-card',
   '.req-card',
-  '.testimonial-item',
   '.fact-item',
   '.price-card',
 ];
@@ -242,19 +241,14 @@ function handleRegisterSubmit(e) {
   const paymentStep = document.getElementById('payment-step');
   
   // Lấy lựa chọn khoá học và hình thức đóng phí
-  const course = document.getElementById('reg-course').value;
+  const courseOption = document.getElementById('reg-course').selectedOptions[0];
   const payment = document.getElementById('reg-payment').value;
-  let amount = 0;
-  
-  if (course === 'beginner') {
-    amount = payment === 'Trả góp' ? 3000000 : 7000000;
-  } else if (course === 'advance') {
-    amount = payment === 'Trả góp' ? 4000000 : 16000000;
-  }
+  const amount = Number(payment === 'Trả góp' ? courseOption?.dataset.deposit : courseOption?.dataset.price);
+  if (!Number.isFinite(amount) || amount <= 0) return;
 
   // Lấy thêm số điện thoại để làm nội dung chuyển khoản
   const phone = document.getElementById('reg-phone').value;
-  const courseStr = course === 'beginner' ? 'Beginner' : (course === 'advance' ? 'Advance' : course);
+  const courseStr = courseOption.dataset.title;
   const transferContent = encodeURIComponent(`${courseStr} ${phone}`);
 
   // Cập nhật số tiền và mã QR
@@ -334,34 +328,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---- PRE-SELECT COURSE FROM PRICING BUTTONS ----
-// If user clicks "Đăng Ký Beginner" or "Đăng Ký Advance" in pricing section,
-// pre-fill the course dropdown when they reach the form
 document.addEventListener('click', (e) => {
-  const btn = e.target.closest('a[href="#register"]');
+  const btn = e.target.closest('a[href="#register"][data-course]');
   if (!btn) return;
-  const id = btn.id || '';
   const courseSelect = document.getElementById('reg-course');
   if (!courseSelect) return;
-  if (id === 'price-btn-beginer' || id === 'hero-btn-register' || id === 'compare-btn-beginner') {
-    setTimeout(() => { courseSelect.value = 'beginner'; }, 400);
-  } else if (id === 'price-btn-advance' || id === 'compare-btn-advance') {
-    setTimeout(() => { courseSelect.value = 'advance'; }, 400);
-  }
+  courseSelect.value = btn.dataset.course;
+  courseSelect.dispatchEvent(new Event('change'));
 });
 
 // ---- TOGGLE PAYMENT INSTALLMENT DESCRIPTION ----
 document.addEventListener('DOMContentLoaded', () => {
+  const courseSelect = document.getElementById('reg-course');
   const paymentSelect = document.getElementById('reg-payment');
   const installmentDesc = document.getElementById('payment-installment-desc');
-  if (paymentSelect && installmentDesc) {
-    paymentSelect.addEventListener('change', () => {
-      if (paymentSelect.value === 'Trả góp') {
-        installmentDesc.style.display = 'block';
-      } else {
-        installmentDesc.style.display = 'none';
-      }
-    });
-  }
+  const courseNote = document.getElementById('payment-course-note');
+  if (!courseSelect || !paymentSelect || !installmentDesc || !courseNote) return;
+  const installmentOption = Array.from(paymentSelect.options).find(option => option.value === 'Trả góp');
+  const updatePayment = () => {
+    const hasDeposit = Boolean(courseSelect.selectedOptions[0]?.dataset.deposit);
+    installmentOption.disabled = !hasDeposit;
+    if (!hasDeposit && paymentSelect.value === 'Trả góp') paymentSelect.value = '';
+    installmentDesc.style.display = hasDeposit && paymentSelect.value === 'Trả góp' ? 'block' : 'none';
+    courseNote.style.display = courseSelect.value && !hasDeposit ? 'block' : 'none';
+  };
+  courseSelect.addEventListener('change', updatePayment);
+  paymentSelect.addEventListener('change', updatePayment);
+  updatePayment();
 });
 
 // ============================================
@@ -642,29 +635,40 @@ createFallingCards();
 // SWIPER INIT FOR TESTIMONIALS
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-  if (typeof Swiper !== 'undefined') {
-    new Swiper('.feedback-swiper', {
-      effect: 'cards',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      loop: false, // cards effect sometimes glitches with loop on many items, false is safer
-      cardsEffect: {
-        perSlideOffset: 8,
-        perSlideRotate: 2,
-        rotate: true,
-        slideShadows: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    });
-  }
+  const gallery = document.querySelector('.feedback-swiper');
+  if (!gallery || typeof Swiper === 'undefined') return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  new Swiper(gallery, {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    speed: reduceMotion ? 0 : 520,
+    slideToClickedSlide: true,
+    keyboard: { enabled: true, onlyInViewport: true },
+    coverflowEffect: {
+      rotate: 54,
+      depth: 84,
+      scale: 0.92,
+      slideShadows: false,
+    },
+    a11y: {
+      prevSlideMessage: 'Cảm nhận trước',
+      nextSlideMessage: 'Cảm nhận tiếp theo',
+      paginationBulletMessage: 'Xem cảm nhận {{index}}',
+    },
+    pagination: {
+      el: gallery.querySelector('.swiper-pagination'),
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: gallery.querySelector('.swiper-button-next'),
+      prevEl: gallery.querySelector('.swiper-button-prev'),
+    },
+  });
 });
 
 // ============================================
