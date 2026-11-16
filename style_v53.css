@@ -2396,7 +2396,6 @@ h1, h2, h3, h4, h5, h6, .section-title, .hero-title, .benefit-card h3, .about-co
   border-radius: 0 8px 8px 0;
   animation: fade-in-desc 0.3s ease forwards;
 }
-#payment-course-note a { color: inherit; text-decoration: underline; }
 
 @keyframes fade-in-desc {
   from { opacity: 0; transform: translateY(-4px); }

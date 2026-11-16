@@ -342,15 +342,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const courseSelect = document.getElementById('reg-course');
   const paymentSelect = document.getElementById('reg-payment');
   const installmentDesc = document.getElementById('payment-installment-desc');
-  const courseNote = document.getElementById('payment-course-note');
-  if (!courseSelect || !paymentSelect || !installmentDesc || !courseNote) return;
+  const installmentCourse = document.getElementById('payment-installment-course');
+  const installmentAmount = document.getElementById('payment-installment-amount');
+  if (!courseSelect || !paymentSelect || !installmentDesc || !installmentCourse || !installmentAmount) return;
   const installmentOption = Array.from(paymentSelect.options).find(option => option.value === 'Trả góp');
   const updatePayment = () => {
-    const hasDeposit = Boolean(courseSelect.selectedOptions[0]?.dataset.deposit);
+    const course = courseSelect.selectedOptions[0]?.dataset;
+    const hasDeposit = Boolean(course?.deposit);
     installmentOption.disabled = !hasDeposit;
     if (!hasDeposit && paymentSelect.value === 'Trả góp') paymentSelect.value = '';
-    installmentDesc.style.display = hasDeposit && paymentSelect.value === 'Trả góp' ? 'block' : 'none';
-    courseNote.style.display = courseSelect.value && !hasDeposit ? 'block' : 'none';
+    const showInstallment = hasDeposit && paymentSelect.value === 'Trả góp';
+    installmentDesc.style.display = showInstallment ? 'block' : 'none';
+    if (showInstallment) {
+      installmentCourse.textContent = course.title;
+      installmentAmount.textContent = new Intl.NumberFormat('vi-VN').format(Number(course.deposit)) + 'đ';
+    }
   };
   courseSelect.addEventListener('change', updatePayment);
   paymentSelect.addEventListener('change', updatePayment);

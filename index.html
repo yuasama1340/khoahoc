@@ -758,8 +758,8 @@
                   <option value="" disabled selected>-- Chọn khoá học --</option>
                   <optgroup label="Khoá học">
                     <option value="beginner" data-price="7500000" data-deposit="3000000" data-title="Beginner">Beginner (7.500.000đ · 16 buổi)</option>
-                    <option value="advance" data-price="10500000" data-title="Advance">Advance (10.500.000đ · 16 buổi)</option>
-                    <option value="full-stack" data-price="16000000" data-title="Master Path">Master Path (16.000.000đ · 32 buổi)</option>
+                    <option value="advance" data-price="10500000" data-deposit="4000000" data-title="Advance">Advance (10.500.000đ · 16 buổi)</option>
+                    <option value="full-stack" data-price="16000000" data-deposit="4000000" data-title="Master Path">Master Path (16.000.000đ · 32 buổi)</option>
                   </optgroup>
                 </select>
                 <span class="select-arrow">⌄</span>
@@ -793,9 +793,8 @@
                 <span class="select-arrow">⌄</span>
               </div>
               <div id="payment-installment-desc" class="payment-desc">
-                Với Beginner, bạn đóng trước phí giữ chỗ là 3.000.000đ. Phần học phí còn lại chia đều cho các tháng.
+                Với <span id="payment-installment-course"></span>, bạn đóng trước phí giữ chỗ là <strong id="payment-installment-amount"></strong>. Phần học phí còn lại chia đều cho các tháng.
               </div>
-              <p id="payment-course-note" class="payment-desc">Nếu muốn hỏi về phương án trả góp cho khóa này, bạn có thể <a href="https://www.facebook.com/clowcatpatronus">nhắn Clow Cat Patronus</a> trước khi thanh toán.</p>
             </div>
 
             <div class="form-group">
@@ -943,6 +942,6 @@
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./script_v3.js?v=feedback-3d"></script>
+  <script src="./script_v3.js?v=course-installments"></script>
 </body>
 </html>
